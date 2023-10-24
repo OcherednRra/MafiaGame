@@ -9,6 +9,10 @@ public class App {
         System.out.println(game.getRandomClueCard());
         System.out.println(game.getRandomClueCard());
         System.out.println(game.getRandomClueCard());
+        System.out.println(game.getRandomWeaponCard());
+        System.out.println(game.getRandomWeaponCard());
+        System.out.println(game.getRandomWeaponCard());
+        System.out.println(game.getRandomWeaponCard());
         System.out.println(game.getCardsBlackList());
 
 

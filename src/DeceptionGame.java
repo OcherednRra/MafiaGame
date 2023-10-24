@@ -32,11 +32,6 @@ public class DeceptionGame {
             this.type = type;
         }
 
-        public Card getRandomWeaponCard()
-        {
-            return new Card(random.nextInt(DeceptionGame.weaponCardsNumber) + 1 + ".png", "weapon");
-        }
-
         public String toString() {
             return this.type + " card " + this.title;
         }
@@ -58,14 +53,24 @@ public class DeceptionGame {
         Card card;
         do
         {
-            card = new Card(random.nextInt(clueCardsNumber) + 1 + ".png", "clue");
+            card = new Card(random.nextInt(10) + 1 + ".png", "clue");
         }
         while (cardsBlackList.contains(card));
         cardsBlackList.add(card);
         return card;
     }
 
-
+    public Card getRandomWeaponCard()
+    {
+        Card card;
+        do
+        {
+            card = new Card(random.nextInt(10) + 1 + ".png", "weapon");
+        }
+        while (cardsBlackList.contains(card));
+        cardsBlackList.add(card);
+        return card;
+    }
 
 
     public String getCardsBlackList()
