@@ -4,17 +4,8 @@ public class App {
     public static void main(String[] args)
     {
         DeceptionGame game = new DeceptionGame(8);
-        System.out.println(game.getCardsBlackList());
-        System.out.println(game.getRandomClueCard());
-        System.out.println(game.getRandomClueCard());
-        System.out.println(game.getRandomClueCard());
-        System.out.println(game.getRandomClueCard());
-        System.out.println(game.getRandomWeaponCard());
-        System.out.println(game.getRandomWeaponCard());
-        System.out.println(game.getRandomWeaponCard());
-        System.out.println(game.getRandomWeaponCard());
-        System.out.println(game.getCardsBlackList());
+        game.startGame();
 
-
+        System.out.println(game.getListOfPlayers());
     }
 }

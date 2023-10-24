@@ -1,13 +1,13 @@
 import java.io.File;
 import java.sql.Array;
-import java.util.ArrayList;
-import java.util.Objects;
-import java.util.Random;
-import java.util.Scanner;
+import java.util.*;
 
 public class DeceptionGame {
 
     int playersNumber;
+    ArrayList<String> discordTagsOfPlayers = new ArrayList<>();
+    ArrayList<String> roles = new ArrayList<>();
+    static ArrayList<Player> listOfPlayers = new ArrayList<>();
     String gameMode;
     static int clueCardsNumber = getClueCardsNumber();
     static int weaponCardsNumber = getWeaponCardsNumber();
@@ -18,7 +18,6 @@ public class DeceptionGame {
     DeceptionGame(int players)
     {
         this.playersNumber = players;
-        this.gameMode = this.setGameMode();
     }
 
     public static class Card
@@ -48,24 +47,55 @@ public class DeceptionGame {
         }
     }
 
-    public Card getRandomClueCard()
+    public static class Player
+    {
+        String name;
+        String role;
+        ArrayList<Card> clueHand = new ArrayList<>();
+        ArrayList<Card> weaponHand = new ArrayList<>();
+
+        Player(String name, String role)
+        {
+            this.name = name;
+            this.role = role;
+            for (int i = 0; i < 4; i++)
+            {
+                this.clueHand.add(getRandomClueCard());
+                this.weaponHand.add(getRandomWeaponCard());
+            }
+        }
+
+        public String toString()
+        {
+            return "Игрок " + this.name + " - " + this.role + ".\n" +
+                    "Clue: " + this.clueHand.toString() + "\n" +
+                    "Weapon: " + this.weaponHand.toString();
+        }
+    }
+
+    public Player createPlayer(String name, String role)
+    {
+        return new Player(name, role);
+    }
+
+    public static Card getRandomClueCard()
     {
         Card card;
         do
         {
-            card = new Card(random.nextInt(10) + 1 + ".png", "clue");
+            card = new Card(random.nextInt(clueCardsNumber) + 1 + ".png", "clue");
         }
         while (cardsBlackList.contains(card));
         cardsBlackList.add(card);
         return card;
     }
 
-    public Card getRandomWeaponCard()
+    public static Card getRandomWeaponCard()
     {
         Card card;
         do
         {
-            card = new Card(random.nextInt(10) + 1 + ".png", "weapon");
+            card = new Card(random.nextInt(weaponCardsNumber) + 1 + ".png", "weapon");
         }
         while (cardsBlackList.contains(card));
         cardsBlackList.add(card);
@@ -85,13 +115,25 @@ public class DeceptionGame {
 
     public String setGameMode()
     {
-        if (playersNumber <= 5) return "standard";
-        else return "extended";
+        this.roles.add("criminologist");
+        this.roles.add("killer");
+
+        if (playersNumber > 5)
+        {
+            this.roles.add("accomplice");
+            this.roles.add("witness");
+        }
+
+        for (int i = 0; i < playersNumber - (playersNumber > 5 ? 4 : 2); i++)
+            this.roles.add("investigator");
+
+        return (playersNumber <= 5) ? "standard" : "extended";
     }
 
     public String getGameMode()
     {
-        return gameMode;
+        return "Game Mode: " + gameMode + "\n"
+                + "Number of players: " + playersNumber;
     }
 
     public static int getClueCardsNumber()
@@ -104,8 +146,17 @@ public class DeceptionGame {
         return Objects.requireNonNull(new File("src\\weapon").listFiles()).length;
     }
 
+    public static String getListOfPlayers()
+    {
+        return  listOfPlayers.toString();
+    }
+
     public void startGame()
     {
-        System.out.println("Игра началась!");
+        this.gameMode = this.setGameMode();
+        Collections.shuffle(this.roles);
+
+        for (int i = 0; i < playersNumber; i ++)
+            listOfPlayers.add(new Player(discordTagsOfPlayers.get(i), this.roles.get(i)));
     }
 }
