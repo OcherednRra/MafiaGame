@@ -10,7 +10,7 @@ public class MafiaLikeBot {
     {
 //        DeceptionGame game = new DeceptionGame("whovian", "OcherednRra", "yourwaifu");
 //        game.startGame();
-        JDA bot = JDABuilder.createDefault("MTE2NjgyMjg2MzA2MDM1NzI3MA.GPnHIu.DEtH8vV4xCeiQ3fZ28fJxiqbfKSQb1ApIv_8yQ")
+        JDA bot = JDABuilder.createDefault("token")
                 .setActivity(Activity.playing("в спальной комната твоя мама"))
                 .enableIntents(GatewayIntent.MESSAGE_CONTENT)
                 .build();
