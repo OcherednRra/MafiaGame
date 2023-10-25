@@ -15,9 +15,10 @@ public class DeceptionGame {
     static Random random = new Random();
     static ArrayList<Card> cardsBlackList = new ArrayList<>();
 
-    DeceptionGame(int players)
+    DeceptionGame(String... players)
     {
-        this.playersNumber = players;
+        this.playersNumber = players.length;
+        this.discordTagsOfPlayers.addAll(Arrays.asList(players));
     }
 
     public static class Card
@@ -67,7 +68,7 @@ public class DeceptionGame {
 
         public String toString()
         {
-            return "Игрок " + this.name + " - " + this.role + ".\n" +
+            return "\nИгрок " + this.name + " - " + this.role + ".\n" +
                     "Clue: " + this.clueHand.toString() + "\n" +
                     "Weapon: " + this.weaponHand.toString();
         }
@@ -157,6 +158,6 @@ public class DeceptionGame {
         Collections.shuffle(this.roles);
 
         for (int i = 0; i < playersNumber; i ++)
-            listOfPlayers.add(new Player(discordTagsOfPlayers.get(i), this.roles.get(i)));
+            listOfPlayers.add(new Player(this.discordTagsOfPlayers.get(i), this.roles.get(i)));
     }
 }
