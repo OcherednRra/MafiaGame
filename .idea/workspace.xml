@@ -1,10 +1,331 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="db0c8328-fe78-4682-8b53-df3d5f8f1b1c" name="Changes" comment="some updates about starting games and also class Player">
+    <list default="true" id="db0c8328-fe78-4682-8b53-df3d5f8f1b1c" name="Changes" comment="fix error, add discord tags">
+      <change afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/jarRepositories.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__club_minnced_opus_java_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__club_minnced_opus_java_api_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__club_minnced_opus_java_natives_1_1_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_annotations_2_14_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_core_2_14_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_fasterxml_jackson_core_jackson_databind_2_14_1.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_neovisionaries_nv_websocket_client_2_14.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okhttp3_okhttp_4_10_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__com_squareup_okio_okio_jvm_3_0_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_dv8tion_JDA_5_0_0_beta_16.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_java_dev_jna_jna_4_4_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sf_trove4j_trove4j_3_0_3.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_collections4_4_4.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_annotations_13_0.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_1_6_20.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_common_1_5_31.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_jdk7_1_5_31.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jetbrains_kotlin_kotlin_stdlib_jdk8_1_5_31.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_slf4j_slf4j_api_1_7_36.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/DiscordBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/DeceptionGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/DeceptionGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/MafiaGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/MafiaGame.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MafiaLikeBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Card.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/DeceptionGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DeceptionGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Player.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/100.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/101.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/102.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/103.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/104.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/105.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/106.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/107.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/108.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/109.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/11.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/110.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/111.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/112.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/113.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/114.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/115.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/116.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/117.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/118.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/119.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/12.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/120.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/121.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/122.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/123.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/124.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/125.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/126.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/127.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/128.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/129.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/13.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/130.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/131.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/132.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/133.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/134.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/135.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/136.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/137.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/138.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/139.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/14.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/140.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/141.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/142.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/143.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/144.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/145.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/146.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/147.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/148.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/149.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/15.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/150.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/151.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/152.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/153.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/154.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/155.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/156.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/157.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/158.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/159.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/16.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/160.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/161.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/162.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/163.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/164.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/165.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/166.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/167.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/168.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/169.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/17.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/17.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/170.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/171.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/172.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/173.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/174.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/175.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/176.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/177.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/178.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/179.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/18.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/18.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/180.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/181.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/182.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/183.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/184.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/185.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/186.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/187.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/188.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/189.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/19.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/19.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/190.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/191.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/193.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/194.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/195.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/196.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/197.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/198.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/199.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/20.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/20.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/200.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/21.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/22.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/22.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/23.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/23.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/24.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/24.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/25.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/25.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/26.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/26.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/27.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/27.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/28.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/28.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/29.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/29.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/30.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/30.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/31.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/31.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/32.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/33.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/33.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/34.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/34.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/35.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/35.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/36.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/36.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/37.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/37.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/38.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/38.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/39.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/39.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/40.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/40.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/41.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/41.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/42.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/42.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/43.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/43.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/44.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/44.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/45.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/45.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/46.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/46.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/47.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/47.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/48.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/48.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/49.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/49.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/50.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/50.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/51.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/51.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/52.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/52.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/53.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/53.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/54.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/54.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/55.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/55.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/56.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/56.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/57.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/57.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/58.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/58.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/59.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/59.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/60.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/60.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/61.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/61.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/62.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/62.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/63.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/63.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/64.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/64.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/65.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/65.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/66.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/66.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/67.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/67.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/68.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/68.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/69.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/69.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/70.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/70.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/71.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/71.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/72.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/72.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/73.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/73.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/74.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/74.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/75.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/75.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/76.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/76.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/77.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/77.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/78.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/78.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/79.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/79.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/80.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/80.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/81.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/81.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/82.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/82.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/83.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/83.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/84.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/84.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/85.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/85.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/86.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/86.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/87.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/87.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/88.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/88.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/89.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/89.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/90.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/90.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/91.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/91.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/92.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/92.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/93.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/93.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/94.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/94.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/95.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/95.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/96.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/96.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/97.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/clue/97.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/98.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/clue/99.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/1.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/10.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/11.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/11.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/12.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/12.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/13.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/13.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/14.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/14.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/15.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/15.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/16.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/16.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/17.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/17.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/18.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/18.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/19.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/19.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/2.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/20.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/20.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/21.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/22.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/22.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/23.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/23.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/24.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/24.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/25.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/25.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/26.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/26.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/27.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/27.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/28.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/28.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/29.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/29.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/3.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/30.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/30.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/31.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/31.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/32.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/32.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/33.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/33.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/34.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/34.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/35.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/35.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/36.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/36.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/37.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/37.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/38.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/38.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/39.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/39.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/4.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/40.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/40.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/41.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/41.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/42.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/42.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/43.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/43.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/44.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/44.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/45.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/45.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/46.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/46.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/47.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/47.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/48.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/48.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/49.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/49.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/5.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/50.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/50.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/51.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/51.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/52.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/52.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/53.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/53.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/54.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/54.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/55.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/55.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/56.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/56.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/57.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/57.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/58.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/58.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/59.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/59.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/6.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/60.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/60.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/61.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/61.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/62.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/62.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/63.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/63.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/64.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/64.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/65.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/65.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/66.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/66.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/67.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/67.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/68.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/68.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/69.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/69.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/7.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/70.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/70.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/71.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/71.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/72.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/72.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/73.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/73.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/74.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/74.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/75.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/75.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/76.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/76.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/77.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/77.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/78.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/78.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/79.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/79.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/8.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/80.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/80.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/81.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/81.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/82.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/82.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/83.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/83.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/84.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/84.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/85.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/85.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/86.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/86.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/87.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/87.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/88.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/88.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/89.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/89.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/9.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/weapon/90.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/weapon/90.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -30,31 +351,48 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/valen/IdeaProjects/MafiaGame/src&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/valen/IdeaProjects/MafiaGame/src",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "File.Encoding"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\valen\IdeaProjects\MafiaGame\src" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\valen\IdeaProjects\MafiaGame\src\main\java\me\mafialikebot\clue\clue" />
+      <recent name="C:\Users\valen\IdeaProjects\MafiaGame\src\main\java\me\mafialikebot\clue" />
+    </key>
+    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
+      <recent name="" />
+    </key>
   </component>
-  <component name="RunManager" selected="Application.App">
-    <configuration name="App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="App" />
+  <component name="RunManager" selected="Application.MafiaLikeBot">
+    <configuration name="MafiaLikeBot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MafiaLikeBot" />
       <module name="MafiaGame" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DeceptionGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="DeceptionGame" />
+    <configuration name="me.mafialikebot.clue.App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.mafialikebot.clue.App" />
+      <module name="MafiaGame" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="me.mafialikebot.clue.DeceptionGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="me.mafialikebot.clue.DeceptionGame" />
       <module name="MafiaGame" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -62,8 +400,9 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.App" />
-        <item itemvalue="Application.DeceptionGame" />
+        <item itemvalue="Application.MafiaLikeBot" />
+        <item itemvalue="Application.me.mafialikebot.clue.App" />
+        <item itemvalue="Application.me.mafialikebot.clue.DeceptionGame" />
       </list>
     </recent_temporary>
   </component>
@@ -79,7 +418,7 @@
       <workItem from="1698146316990" duration="733000" />
       <workItem from="1698147178604" duration="12524000" />
       <workItem from="1698168975760" duration="8643000" />
-      <workItem from="1698253331589" duration="1180000" />
+      <workItem from="1698253331589" duration="7858000" />
     </task>
     <task id="LOCAL-00001" summary="add equals() method to class Card">
       <created>1698158666337</created>
@@ -102,7 +441,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698176474556</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix error, add discord tags">
+      <created>1698254783884</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1698254783884</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -123,7 +469,8 @@
     <MESSAGE value="add equals() method to class Card" />
     <MESSAGE value="add getRandomWeaponCard() class" />
     <MESSAGE value="some updates about starting games and also class Player" />
-    <option name="LAST_COMMIT_MESSAGE" value="some updates about starting games and also class Player" />
+    <MESSAGE value="fix error, add discord tags" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix error, add discord tags" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
