@@ -4,7 +4,7 @@ import java.util.*;
 public class DeceptionGame {
 
     int playersNumber;
-    ArrayList<String> discordTagsOfPlayers = new ArrayList<>();
+    ArrayList<String> discordTagsOfPlayers;
     ArrayList<String> roles = new ArrayList<>();
     static ArrayList<Player> listOfPlayers = new ArrayList<>();
     String gameMode;
@@ -17,7 +17,7 @@ public class DeceptionGame {
     DeceptionGame(String... players)
     {
         this.playersNumber = players.length;
-        this.discordTagsOfPlayers.addAll(Arrays.asList(players));
+        this.discordTagsOfPlayers = new ArrayList<>(Arrays.asList(players));
     }
 
     public static class Card
@@ -69,7 +69,7 @@ public class DeceptionGame {
         {
             return "\nИгрок " + this.name + " - " + this.role + ".\n" +
                     "Clue: " + this.clueHand.toString() + "\n" +
-                    "Weapon: " + this.weaponHand.toString();
+                    "Weapon: " + this.weaponHand.toString() + "\n";
         }
     }
 
@@ -83,7 +83,7 @@ public class DeceptionGame {
         Card card;
         do
         {
-            card = new Card(random.nextInt(clueCardsNumber) + 1 + ".png", "me/ocherednrra/MafiaLikeBot/clue");
+            card = new Card(random.nextInt(clueCardsNumber) + 1 + ".png", "clue");
         }
         while (cardsBlackList.contains(card));
         cardsBlackList.add(card);

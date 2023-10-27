@@ -5,21 +5,20 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 
-public class MafiaLikeBot {
+import java.io.FileInputStream;
+import java.io.InputStream;
+import java.util.Properties;
+
+public class MafiaLikeBot
+{
     public static void main(String[] args)
     {
-//        DeceptionGame game = new DeceptionGame("whovian", "OcherednRra", "yourwaifu");
-//        game.startGame();
-        JDA bot = JDABuilder.createDefault("token")
+        JDA bot = JDABuilder.createDefault(Config.getBotToken())
                 .setActivity(Activity.playing("в спальной комната твоя мама"))
                 .enableIntents(GatewayIntent.MESSAGE_CONTENT)
                 .build();
 
-        bot.addEventListener(new DiscordBot());
+        bot.addEventListener(new DiscordBotCommands());
 
     }
-
-
-//        System.out.println(game.getListOfPlayers());
 }
-
