@@ -4,13 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db0c8328-fe78-4682-8b53-df3d5f8f1b1c" name="Changes" comment="del token">
-      <change afterPath="$PROJECT_DIR$/src/main/java/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="db0c8328-fe78-4682-8b53-df3d5f8f1b1c" name="Changes" comment="hide token to config file and create Config class">
+      <change afterPath="$PROJECT_DIR$/src/main/java/DiscordBot.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/MafiaLike.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DeceptionGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DeceptionGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DiscordBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DiscordBotCommands.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MafiaLikeBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/MafiaLikeBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DiscordBotCommands.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MafiaLikeBot.java" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,8 +63,8 @@
     </key>
   </component>
   <component name="RunManager" selected="Application.MafiaLikeBot">
-    <configuration name="MafiaLikeBot" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MafiaLikeBot" />
+    <configuration name="MafiaLike" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="MafiaLike" />
       <module name="MafiaGame" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -106,7 +105,7 @@
       <workItem from="1698147178604" duration="12524000" />
       <workItem from="1698168975760" duration="8643000" />
       <workItem from="1698253331589" duration="8031000" />
-      <workItem from="1698433182817" duration="4426000" />
+      <workItem from="1698433182817" duration="6464000" />
     </task>
     <task id="LOCAL-00001" summary="add equals() method to class Card">
       <created>1698158666337</created>
@@ -150,7 +149,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698265509306</updated>
     </task>
-    <option name="localTasksCounter" value="7" />
+    <task id="LOCAL-00007" summary="hide token to config file and create Config class">
+      <created>1698437899159</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1698437899159</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -174,7 +180,8 @@
     <MESSAGE value="fix error, add discord tags" />
     <MESSAGE value="start making discord bot" />
     <MESSAGE value="del token" />
-    <option name="LAST_COMMIT_MESSAGE" value="del token" />
+    <MESSAGE value="hide token to config file and create Config class" />
+    <option name="LAST_COMMIT_MESSAGE" value="hide token to config file and create Config class" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
