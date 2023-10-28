@@ -4,12 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db0c8328-fe78-4682-8b53-df3d5f8f1b1c" name="Changes" comment="hide token to config file and create Config class">
-      <change afterPath="$PROJECT_DIR$/src/main/java/DiscordBot.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/MafiaLike.java" afterDir="false" />
+    <list default="true" id="db0c8328-fe78-4682-8b53-df3d5f8f1b1c" name="Changes" comment="add hello message to private messages by command &quot;!private&quot;">
+      <change afterPath="$PROJECT_DIR$/src/main/java/ImagesJoin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/temp/temp.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DiscordBotCommands.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/MafiaLikeBot.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DeceptionGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DeceptionGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DiscordBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DiscordBot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,24 +37,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;C:/Users/valen/IdeaProjects/MafiaGame/src&quot;,
-    &quot;project.structure.last.edited&quot;: &quot;Modules&quot;,
-    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
-    &quot;project.structure.side.proportion&quot;: &quot;0.0&quot;,
-    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "WebServerToolWindowFactoryState": "false",
+    "last_opened_file_path": "C:/Users/valen/IdeaProjects/MafiaGame/src/main/java/temp",
+    "project.structure.last.edited": "Modules",
+    "project.structure.proportion": "0.0",
+    "project.structure.side.proportion": "0.0",
+    "settings.editor.selected.configurable": "File.Encoding"
   }
-}</component>
+}]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\valen\IdeaProjects\MafiaGame\src\main\java\temp" />
       <recent name="C:\Users\valen\IdeaProjects\MafiaGame\src" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\valen\IdeaProjects\MafiaGame\src\main\java" />
       <recent name="C:\Users\valen\IdeaProjects\MafiaGame\src\main\java\me\mafialikebot\clue\clue" />
       <recent name="C:\Users\valen\IdeaProjects\MafiaGame\src\main\java\me\mafialikebot\clue" />
     </key>
@@ -62,7 +64,7 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MafiaLikeBot">
+  <component name="RunManager" selected="Application.MafiaLike">
     <configuration name="MafiaLike" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MafiaLike" />
       <module name="MafiaGame" />
@@ -86,7 +88,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.MafiaLikeBot" />
+        <item itemvalue="Application.MafiaLike" />
         <item itemvalue="Application.me.mafialikebot.clue.App" />
         <item itemvalue="Application.me.mafialikebot.clue.DeceptionGame" />
       </list>
@@ -105,7 +107,8 @@
       <workItem from="1698147178604" duration="12524000" />
       <workItem from="1698168975760" duration="8643000" />
       <workItem from="1698253331589" duration="8031000" />
-      <workItem from="1698433182817" duration="6464000" />
+      <workItem from="1698433182817" duration="7564000" />
+      <workItem from="1698507423566" duration="16554000" />
     </task>
     <task id="LOCAL-00001" summary="add equals() method to class Card">
       <created>1698158666337</created>
@@ -156,7 +159,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698437899159</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="add hello message to private messages by command &quot;!private&quot;">
+      <created>1698439927017</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1698439927017</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -181,7 +191,8 @@
     <MESSAGE value="start making discord bot" />
     <MESSAGE value="del token" />
     <MESSAGE value="hide token to config file and create Config class" />
-    <option name="LAST_COMMIT_MESSAGE" value="hide token to config file and create Config class" />
+    <MESSAGE value="add hello message to private messages by command &quot;!private&quot;" />
+    <option name="LAST_COMMIT_MESSAGE" value="add hello message to private messages by command &quot;!private&quot;" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

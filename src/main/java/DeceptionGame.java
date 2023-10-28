@@ -14,10 +14,10 @@ public class DeceptionGame {
     static Random random = new Random();
     static ArrayList<Card> cardsBlackList = new ArrayList<>();
 
-    DeceptionGame(String... players)
+    DeceptionGame(ArrayList<String> players)
     {
-        this.playersNumber = players.length;
-        this.discordTagsOfPlayers = new ArrayList<>(Arrays.asList(players));
+        this.playersNumber = players.size();
+        this.discordTagsOfPlayers = players;
     }
 
     public static class Card
@@ -146,9 +146,9 @@ public class DeceptionGame {
         return Objects.requireNonNull(new File("src\\main\\java\\weapon").listFiles()).length;
     }
 
-    public static String getListOfPlayers()
+    public static ArrayList<Player> getListOfPlayers()
     {
-        return  listOfPlayers.toString();
+        return listOfPlayers;
     }
 
     public void startGame()
