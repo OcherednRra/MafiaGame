@@ -1,3 +1,6 @@
+import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.entities.MessageEmbed;
+
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
@@ -38,8 +41,11 @@ public class ImagesJoin
         ImageIO.write(combined, "PNG", new File("src\\main\\java\\temp\\temp.png"));
     }
 
-    public static BufferedImage getFile(String file) throws IOException
+    public static MessageEmbed buildImage()
     {
-        return ImageIO.read(new File("src\\main\\java\\" + file));
+        EmbedBuilder embed = new EmbedBuilder();
+        embed.setImage("attachment://file.png");
+
+        return embed.build();
     }
 }

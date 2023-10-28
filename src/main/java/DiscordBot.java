@@ -1,3 +1,4 @@
+import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
@@ -69,22 +70,7 @@ public class DiscordBot extends ListenerAdapter
                     event.getChannel().sendMessage(DeceptionGame.getListOfPlayers().toString()).queue();
                 }
                 break;
-//            case "!private":
-//                if (discordTagsOfPlayers.size() == 0)
-//                {
-//                    event.getChannel().sendMessage("Отправлено личное сообщение").queue();
-//                    Objects.requireNonNull(event.getAuthor()).openPrivateChannel().flatMap(channel -> channel.sendMessage("Hello!")).queue();
-//                }
-//                else
-//                {
-//                    event.getChannel().sendMessage("Отправлено личное сообщение").queue();
-//                    bot.retrieveUserById("1161274335118495856").queue(user -> {
-//                        user.openPrivateChannel().queue((channel) -> {
-//                            channel.sendMessage("Hello, " + discordTagsOfPlayers.get(0)).queue();
-//                        });
-//                    });
-//                }
-//                break;
+
             case "!createfile":
                 try {
                     ImagesJoin.createImage(DeceptionGame.listOfPlayers.get(0).clueHand);
@@ -92,16 +78,10 @@ public class DiscordBot extends ListenerAdapter
                     throw new RuntimeException(e);
                 }
 
-                BufferedImage img;
-                try {
-                    img = ImagesJoin.getFile("temp.png");
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-
-                byte[] buffer = ((DataBufferByte)(img).getRaster().getDataBuffer()).getData();
-                FileUpload upload = FileUpload.fromData(buffer, "temp.png");
-                event.getChannel().sendFiles(upload).queue();
+                File file = new File("src\\main\\java\\temp\\temp.png");
+                event.getChannel().sendFiles(FileUpload.fromData(file, "file.png"))
+                    .setEmbeds(ImagesJoin.buildImage())
+                    .queue();
 
                 break;
             case "!join":
