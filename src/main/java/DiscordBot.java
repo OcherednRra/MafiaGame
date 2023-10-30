@@ -44,20 +44,9 @@ public class DiscordBot extends ListenerAdapter
 
         switch (message.get(0))
         {
-            case "!mycommand":
-                event.getChannel().sendMessage(DeceptionGame.getListOfPlayers().toString()).queue();
-                break;
             case "!start_game":
-                if (!isGameOn)
+                if (isGameOn)
                 {
-                    isGameOn = true;
-                    userIdList.clear();
-                    userIdList.add(event.getAuthor());
-                    event.getChannel().sendMessage(userIdList.size() + "/12").queue();
-                }
-                else
-                {
-
                     event.getChannel().sendMessage("Набор игроков окончен " + userIdList.size()).queue();
                     for (User user : userIdList)
                     {
@@ -67,23 +56,22 @@ public class DiscordBot extends ListenerAdapter
                     DeceptionGame game = new DeceptionGame(discordTagsOfPlayers);
                     game.startGame();
 
-                    event.getChannel().sendMessage(DeceptionGame.getListOfPlayers().toString()).queue();
+                    for (int i = 0; i < DeceptionGame.getListOfPlayers().size(); i++)
+                        ImagesJoin.createCardHandsImage(DeceptionGame.getListOfPlayers(), event);
+
+                    discordTagsOfPlayers.clear();
+                    DeceptionGame.listOfPlayers.clear();
+                    userIdList.clear();
+                    isGameOn = false;
+
+                }
+                else
+                {
+                    isGameOn = true;
+                    event.getChannel().sendMessage(userIdList.size() + "/12").queue();
                 }
                 break;
 
-            case "!createfile":
-                try {
-                    ImagesJoin.createImage(DeceptionGame.listOfPlayers.get(0).clueHand);
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-                }
-
-                File file = new File("src\\main\\java\\temp\\temp.png");
-                event.getChannel().sendFiles(FileUpload.fromData(file, "file.png"))
-                    .setEmbeds(ImagesJoin.buildImage())
-                    .queue();
-
-                break;
             case "!join":
                 if (isGameOn)
                 {
