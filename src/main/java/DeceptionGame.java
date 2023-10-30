@@ -51,13 +51,15 @@ public class DeceptionGame {
     {
         String name;
         String role;
+        String id;
         ArrayList<Card> clueHand = new ArrayList<>();
         ArrayList<Card> weaponHand = new ArrayList<>();
 
-        Player(String name, String role)
+        Player(String name, String role, String id)
         {
             this.name = name;
             this.role = role;
+            this.id = id;
             for (int i = 0; i < 4; i++)
             {
                 this.clueHand.add(getRandomClueCard());
@@ -73,9 +75,9 @@ public class DeceptionGame {
         }
     }
 
-    public Player createPlayer(String name, String role)
+    public Player createPlayer(String name, String role, String id)
     {
-        return new Player(name, role);
+        return new Player(name, role, id);
     }
 
     public static Card getRandomClueCard()
@@ -157,6 +159,6 @@ public class DeceptionGame {
         Collections.shuffle(this.roles);
 
         for (int i = 0; i < playersNumber; i ++)
-            listOfPlayers.add(new Player(this.discordTagsOfPlayers.get(i), this.roles.get(i)));
+            listOfPlayers.add(new Player(this.discordTagsOfPlayers.get(i), this.roles.get(i), ""));
     }
 }

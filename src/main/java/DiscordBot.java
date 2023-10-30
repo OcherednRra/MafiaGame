@@ -24,7 +24,7 @@ import java.util.Objects;
 public class DiscordBot extends ListenerAdapter
 {
     private static JDA bot;
-    private final ArrayList<User> userIdList = new ArrayList<>();
+    public final ArrayList<User> userIdList = new ArrayList<>();
     private boolean isGameOn = false;
     ArrayList<String> discordTagsOfPlayers = new ArrayList<>();
 
@@ -52,12 +52,12 @@ public class DiscordBot extends ListenerAdapter
                     {
                         discordTagsOfPlayers.add(user.getEffectiveName());
                     }
-
+                    // надо заменить discordTagsOfPlayers на userIdList
                     DeceptionGame game = new DeceptionGame(discordTagsOfPlayers);
                     game.startGame();
 
                     for (int i = 0; i < DeceptionGame.getListOfPlayers().size(); i++)
-                        ImagesJoin.createCardHandsImage(DeceptionGame.getListOfPlayers(), event);
+                        ImagesJoin.createCardHandsImage(DeceptionGame.getListOfPlayers(), userIdList, event);
 
                     discordTagsOfPlayers.clear();
                     DeceptionGame.listOfPlayers.clear();

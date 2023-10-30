@@ -1,5 +1,6 @@
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.entities.MessageEmbed;
+import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.utils.FileUpload;
 
@@ -52,7 +53,7 @@ public class ImagesJoin
                 .queue();
     }
 
-    public static void createCardHandsImage(ArrayList<DeceptionGame.Player> listOfPlayers, MessageReceivedEvent event)
+    public static void createCardHandsImage(ArrayList<DeceptionGame.Player> listOfPlayers, ArrayList<User> usersIdList, MessageReceivedEvent event)
     {
         try {
             for (DeceptionGame.Player player : listOfPlayers)
