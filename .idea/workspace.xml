@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="db0c8328-fe78-4682-8b53-df3d5f8f1b1c" name="Changes" comment="fix sending files">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DeceptionGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DeceptionGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DiscordBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DiscordBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ImagesJoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImagesJoin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -33,6 +30,7 @@
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
+    <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
@@ -109,7 +107,7 @@
       <workItem from="1698433182817" duration="7564000" />
       <workItem from="1698507423566" duration="18941000" />
       <workItem from="1698683809403" duration="7090000" />
-      <workItem from="1698780313822" duration="3096000" />
+      <workItem from="1698780313822" duration="3400000" />
     </task>
     <task id="LOCAL-00001" summary="add equals() method to class Card">
       <created>1698158666337</created>
@@ -195,7 +193,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698693582700</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="fix sending files">
+      <created>1698787066899</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1698787066899</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

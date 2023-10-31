@@ -61,6 +61,10 @@ public class DiscordBot extends ListenerAdapter
                     DeceptionGame game = new DeceptionGame(userIdList);
                     game.startGame();
                     // это пиздец
+                    // это пиздец
+                    // это пиздец
+                    // это пиздец
+                    // это пиздец
                     System.out.println(userIdList.toString());
 
                     for (int i = 0; i < DeceptionGame.getListOfPlayers().size(); i++)
