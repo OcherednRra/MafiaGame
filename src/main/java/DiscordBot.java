@@ -44,7 +44,12 @@ public class DiscordBot extends ListenerAdapter
 
         switch (message.get(0))
         {
-            case "!start_game":
+            case "!start":
+                isGameOn = true;
+                event.getChannel().sendMessage(userIdList.size() + "/12").queue();
+                break;
+
+            case "!end":
                 if (isGameOn)
                 {
                     event.getChannel().sendMessage("Ќабор игроков окончен " + userIdList.size()).queue();
@@ -52,26 +57,20 @@ public class DiscordBot extends ListenerAdapter
                     {
                         discordTagsOfPlayers.add(user.getEffectiveName());
                     }
-                    // надо заменить discordTagsOfPlayers на userIdList
-                    DeceptionGame game = new DeceptionGame(discordTagsOfPlayers);
+
+                    DeceptionGame game = new DeceptionGame(userIdList);
                     game.startGame();
+                    // это пиздец
+                    System.out.println(userIdList.toString());
 
                     for (int i = 0; i < DeceptionGame.getListOfPlayers().size(); i++)
-                        ImagesJoin.createCardHandsImage(DeceptionGame.getListOfPlayers(), userIdList, event);
+                        ImagesJoin.createCardHandsImage(DeceptionGame.getListOfPlayers(), userIdList, event, bot);
 
                     discordTagsOfPlayers.clear();
                     DeceptionGame.listOfPlayers.clear();
                     userIdList.clear();
                     isGameOn = false;
-
                 }
-                else
-                {
-                    isGameOn = true;
-                    event.getChannel().sendMessage(userIdList.size() + "/12").queue();
-                }
-                break;
-
             case "!join":
                 if (isGameOn)
                 {

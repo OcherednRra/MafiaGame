@@ -1,4 +1,5 @@
 import net.dv8tion.jda.api.EmbedBuilder;
+import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
@@ -11,6 +12,7 @@ import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class ImagesJoin
 {
@@ -45,23 +47,22 @@ public class ImagesJoin
         ImageIO.write(combined, "PNG", new File("src\\main\\java\\temp\\" + file_name));
     }
 
-    public static void sendImage(MessageReceivedEvent event, String file_name)
+    public static void sendImage(MessageReceivedEvent event, String file_name, User user, JDA api)
     {
-        event.getChannel()
-                .sendFiles(FileUpload.fromData(new File("src\\main\\java\\temp\\" + file_name), "file.png"))
-                .setEmbeds(new EmbedBuilder().setImage("attachment://file.png").build())
-                .queue();
+        Objects.requireNonNull(api.getUserById(user.getId())).openPrivateChannel()
+                .flatMap(channel -> channel.sendFiles(FileUpload.fromData(new File("src\\main\\java\\temp\\" + file_name), "file.png"))
+                        .setEmbeds(new EmbedBuilder().setImage("attachment://file.png").build())).queue();
     }
 
-    public static void createCardHandsImage(ArrayList<DeceptionGame.Player> listOfPlayers, ArrayList<User> usersIdList, MessageReceivedEvent event)
+    public static void createCardHandsImage(ArrayList<DeceptionGame.Player> listOfPlayers, ArrayList<User> usersIdList, MessageReceivedEvent event, JDA api)
     {
         try {
-            for (DeceptionGame.Player player : listOfPlayers)
+            for (int i = 0; i < listOfPlayers.size(); i++)
             {
-                ImagesJoin.createImage(player.clueHand, player.name + "ClueHand.png");
-                sendImage(event, player.name + "ClueHand.png");
-                ImagesJoin.createImage(player.weaponHand, player.name + "WeaponHand.png");
-                sendImage(event, player.name + "WeaponHand.png");
+                ImagesJoin.createImage(listOfPlayers.get(i).clueHand, listOfPlayers.get(i).name + "ClueHand.png");
+                sendImage(event, listOfPlayers.get(i).name + "ClueHand.png", usersIdList.get(i), api);
+                ImagesJoin.createImage(listOfPlayers.get(i).weaponHand, listOfPlayers.get(i).name + "WeaponHand.png");
+                sendImage(event, listOfPlayers.get(i).name + "WeaponHand.png", usersIdList.get(i), api);
             }
         }
         catch (IOException e) {

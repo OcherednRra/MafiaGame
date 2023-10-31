@@ -108,7 +108,8 @@
       <workItem from="1698253331589" duration="8031000" />
       <workItem from="1698433182817" duration="7564000" />
       <workItem from="1698507423566" duration="18941000" />
-      <workItem from="1698683809403" duration="7007000" />
+      <workItem from="1698683809403" duration="7090000" />
+      <workItem from="1698780313822" duration="3096000" />
     </task>
     <task id="LOCAL-00001" summary="add equals() method to class Card">
       <created>1698158666337</created>
@@ -187,7 +188,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698693063458</updated>
     </task>
-    <option name="localTasksCounter" value="12" />
+    <task id="LOCAL-00012" summary="fix sending files">
+      <created>1698693582700</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1698693582700</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

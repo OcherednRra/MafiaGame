@@ -1,10 +1,13 @@
+import net.dv8tion.jda.api.entities.User;
+
 import java.io.File;
 import java.util.*;
 
 public class DeceptionGame {
 
     int playersNumber;
-    ArrayList<String> discordTagsOfPlayers;
+    ArrayList<String> discordTagsOfPlayers = new ArrayList<>();
+    ArrayList<String> idsOfPlayers = new ArrayList<>();
     ArrayList<String> roles = new ArrayList<>();
     static ArrayList<Player> listOfPlayers = new ArrayList<>();
     String gameMode;
@@ -14,10 +17,14 @@ public class DeceptionGame {
     static Random random = new Random();
     static ArrayList<Card> cardsBlackList = new ArrayList<>();
 
-    DeceptionGame(ArrayList<String> players)
+    DeceptionGame( ArrayList<User> listOfUsers)
     {
-        this.playersNumber = players.size();
-        this.discordTagsOfPlayers = players;
+        this.playersNumber = listOfUsers.size();
+        for (User user : listOfUsers)
+        {
+            this.discordTagsOfPlayers.add(user.getEffectiveName());
+            this.idsOfPlayers.add(user.getId());
+        };
     }
 
     public static class Card
@@ -159,6 +166,6 @@ public class DeceptionGame {
         Collections.shuffle(this.roles);
 
         for (int i = 0; i < playersNumber; i ++)
-            listOfPlayers.add(new Player(this.discordTagsOfPlayers.get(i), this.roles.get(i), ""));
+            listOfPlayers.add(new Player(this.discordTagsOfPlayers.get(i), this.roles.get(i), this.idsOfPlayers.get(i)));
     }
 }
