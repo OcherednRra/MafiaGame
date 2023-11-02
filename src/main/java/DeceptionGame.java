@@ -24,7 +24,7 @@ public class DeceptionGame {
         {
             this.discordTagsOfPlayers.add(user.getEffectiveName());
             this.idsOfPlayers.add(user.getId());
-        };
+        }
     }
 
     public static class Card
@@ -92,7 +92,7 @@ public class DeceptionGame {
         Card card;
         do
         {
-            card = new Card(random.nextInt(clueCardsNumber) + 1 + ".png", "clue");
+            card = new Card(random.nextInt(clueCardsNumber) + 1 + ".png", "images/clue");
         }
         while (cardsBlackList.contains(card));
         cardsBlackList.add(card);
@@ -104,7 +104,7 @@ public class DeceptionGame {
         Card card;
         do
         {
-            card = new Card(random.nextInt(weaponCardsNumber) + 1 + ".png", "weapon");
+            card = new Card(random.nextInt(weaponCardsNumber) + 1 + ".png", "images/weapon");
         }
         while (cardsBlackList.contains(card));
         cardsBlackList.add(card);
