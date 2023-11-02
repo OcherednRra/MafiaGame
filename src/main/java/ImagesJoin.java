@@ -25,7 +25,7 @@ public class ImagesJoin
 
         for (DeceptionGame.Card card : cardsHand)
         {
-            imgs.add(ImageIO.read(new File("src\\main\\java\\" + card.type + "\\" + card.title)));
+            imgs.add(ImageIO.read(new File("src\\main\\resources\\images\\" + card.type + "\\" + card.title)));
         }
 
         for (BufferedImage img : imgs)
@@ -44,13 +44,13 @@ public class ImagesJoin
             currentWidth += img.getWidth();
         }
 
-        ImageIO.write(combined, "PNG", new File("src\\main\\java\\temp\\" + file_name));
+        ImageIO.write(combined, "PNG", new File("src\\main\\resources\\temp\\" + file_name));
     }
 
     public static void sendImage(MessageReceivedEvent event, String file_name, User user, JDA api)
     {
         Objects.requireNonNull(api.getUserById(user.getId())).openPrivateChannel()
-                .flatMap(channel -> channel.sendFiles(FileUpload.fromData(new File("src\\main\\java\\temp\\" + file_name), "file.png"))
+                .flatMap(channel -> channel.sendFiles(FileUpload.fromData(new File("src\\main\\resources\\temp\\" + file_name), "file.png"))
                         .setEmbeds(new EmbedBuilder().setImage("attachment://file.png").build())).queue();
     }
 

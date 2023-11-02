@@ -4,198 +4,115 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db0c8328-fe78-4682-8b53-df3d5f8f1b1c" name="Changes" comment="fix sending files">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="db0c8328-fe78-4682-8b53-df3d5f8f1b1c" name="Changes" comment="fix project folder structure">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/100.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/101.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/102.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/103.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/104.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/105.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/106.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/107.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/108.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/109.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/110.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/111.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/112.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/113.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/114.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/115.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/116.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/117.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/118.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/119.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/120.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/121.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/122.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/123.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/124.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/125.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/126.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/127.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/128.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/129.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/130.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/131.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/132.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/133.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/134.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/135.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/136.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/137.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/138.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/139.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/140.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/141.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/142.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/143.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/144.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/145.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/146.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/147.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/148.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/149.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/150.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/151.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/152.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/153.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/154.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/155.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/156.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/157.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/158.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/159.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/160.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/161.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/162.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/163.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/164.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/165.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/166.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/167.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/168.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/169.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/170.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/171.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/172.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/173.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/174.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/175.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/176.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/177.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/178.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/179.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/180.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/181.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/182.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/183.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/184.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/185.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/186.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/187.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/188.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/189.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/190.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/191.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/192.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/193.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/194.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/195.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/196.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/197.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/198.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/199.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/200.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/98.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/99.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Config.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/DeceptionGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DeceptionGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/11.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/12.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/13.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/13.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/14.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/14.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/15.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/15.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/16.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/17.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/17.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/18.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/18.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/19.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/19.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/20.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/20.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/22.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/22.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/23.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/23.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/24.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/24.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/25.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/25.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/26.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/26.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/27.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/27.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/28.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/28.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/29.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/29.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/30.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/30.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/31.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/31.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/32.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/32.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/33.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/33.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/34.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/34.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/35.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/35.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/36.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/36.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/37.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/37.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/38.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/38.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/39.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/39.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/40.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/40.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/41.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/41.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/42.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/42.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/43.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/43.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/44.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/44.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/45.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/45.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/46.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/46.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/47.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/47.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/48.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/48.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/49.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/49.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/50.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/50.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/51.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/51.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/52.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/52.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/53.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/53.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/54.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/54.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/55.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/55.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/56.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/56.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/57.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/57.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/58.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/58.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/59.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/59.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/60.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/60.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/61.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/61.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/62.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/62.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/63.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/63.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/64.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/64.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/65.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/65.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/66.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/66.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/67.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/67.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/68.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/68.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/69.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/69.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/70.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/70.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/71.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/71.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/72.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/72.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/73.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/73.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/74.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/74.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/75.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/75.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/76.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/76.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/77.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/77.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/78.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/78.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/79.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/79.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/80.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/80.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/81.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/81.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/82.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/82.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/83.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/83.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/84.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/84.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/85.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/85.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/86.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/86.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/87.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/87.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/88.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/88.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/89.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/89.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/90.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/90.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/91.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/91.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/92.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/92.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/93.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/93.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/94.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/94.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/95.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/95.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/96.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/96.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/clue/97.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/clue/97.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/1.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/1.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/10.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/10.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/11.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/11.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/12.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/12.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/13.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/13.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/14.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/14.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/15.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/15.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/16.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/16.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/17.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/17.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/18.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/18.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/19.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/19.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/2.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/2.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/20.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/20.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/21.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/21.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/22.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/22.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/23.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/23.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/24.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/24.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/25.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/25.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/26.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/26.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/27.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/27.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/28.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/28.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/29.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/29.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/3.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/3.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/30.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/30.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/31.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/31.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/32.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/32.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/33.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/33.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/34.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/34.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/35.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/35.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/36.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/36.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/37.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/37.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/38.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/38.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/39.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/39.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/4.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/4.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/40.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/40.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/41.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/41.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/42.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/42.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/43.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/43.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/44.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/44.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/45.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/45.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/46.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/46.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/47.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/47.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/48.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/48.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/49.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/49.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/5.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/5.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/50.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/50.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/51.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/51.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/52.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/52.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/53.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/53.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/54.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/54.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/55.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/55.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/56.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/56.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/57.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/57.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/58.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/58.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/59.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/59.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/6.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/6.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/60.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/60.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/61.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/61.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/62.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/62.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/63.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/63.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/64.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/64.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/65.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/65.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/66.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/66.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/67.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/67.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/68.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/68.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/69.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/69.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/7.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/7.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/70.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/70.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/71.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/71.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/72.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/72.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/73.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/73.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/74.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/74.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/75.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/75.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/76.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/76.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/77.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/77.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/78.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/78.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/79.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/79.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/8.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/8.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/80.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/80.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/81.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/81.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/82.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/82.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/83.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/83.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/84.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/84.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/85.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/85.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/86.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/86.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/87.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/87.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/88.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/88.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/89.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/89.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/9.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/9.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/weapon/90.png" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/images/weapon/90.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ImagesJoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImagesJoin.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,6 +132,13 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="useMavenConfig" value="true" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="2XCt5hcf5XQTh7ifnyKJ2SzIiu5" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -226,19 +150,22 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/valen/IdeaProjects/MafiaGame/src/main/java/temp",
-    "project.structure.last.edited": "Modules",
-    "project.structure.proportion": "0.0",
-    "project.structure.side.proportion": "0.0",
+    "last_opened_file_path": "C:/Users/valen/IdeaProjects/MafiaGame",
+    "project.structure.last.edited": "Libraries",
+    "project.structure.proportion": "0.15",
+    "project.structure.side.proportion": "0.2",
     "settings.editor.selected.configurable": "preferences.customizations"
   }
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\valen\IdeaProjects\MafiaGame" />
+      <recent name="C:\Users\valen\IdeaProjects\MafiaGame\src\main\java" />
       <recent name="C:\Users\valen\IdeaProjects\MafiaGame\src\main\java\temp" />
       <recent name="C:\Users\valen\IdeaProjects\MafiaGame\src" />
     </key>
@@ -253,7 +180,14 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.MafiaLike">
+  <component name="RunManager" selected="Application.Config">
+    <configuration name="Config" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Config" />
+      <module name="MafiaGame" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="MafiaLike" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="MafiaLike" />
       <module name="MafiaGame" />
@@ -277,6 +211,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Application.Config" />
         <item itemvalue="Application.MafiaLike" />
         <item itemvalue="Application.me.mafialikebot.clue.App" />
         <item itemvalue="Application.me.mafialikebot.clue.DeceptionGame" />
@@ -300,7 +235,7 @@
       <workItem from="1698507423566" duration="18941000" />
       <workItem from="1698683809403" duration="7090000" />
       <workItem from="1698780313822" duration="4009000" />
-      <workItem from="1698932019765" duration="3947000" />
+      <workItem from="1698932019765" duration="12567000" />
     </task>
     <task id="LOCAL-00001" summary="add equals() method to class Card">
       <created>1698158666337</created>
@@ -400,7 +335,14 @@
       <option name="project" value="LOCAL" />
       <updated>1698787084818</updated>
     </task>
-    <option name="localTasksCounter" value="15" />
+    <task id="LOCAL-00015" summary="fix project folder structure">
+      <created>1698951248975</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1698951248975</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -418,6 +360,7 @@
     </option>
   </component>
   <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="add equals() method to class Card" />
     <MESSAGE value="add getRandomWeaponCard() class" />
     <MESSAGE value="some updates about starting games and also class Player" />
@@ -429,7 +372,8 @@
     <MESSAGE value="trying to send picture to discord &#10;pizdec" />
     <MESSAGE value="add sending of card hand to discord text channel" />
     <MESSAGE value="fix sending files" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix sending files" />
+    <MESSAGE value="fix project folder structure" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix project folder structure" />
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />

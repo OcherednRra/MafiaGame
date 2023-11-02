@@ -1,26 +1,36 @@
-import java.io.FileInputStream;
-import java.io.IOException;
+import org.w3c.dom.ls.LSOutput;
+
+import java.io.*;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.Objects;
 import java.util.Properties;
 
-public class Config {
-    public static final String BOT_TOKEN;
+public class Config
+{
+    private static final Properties config = readConfig();
 
-    static {
-        Properties prop = new Properties();
+    private static Properties readConfig()
+    {
+        var properties = new Properties();
+
         try
         {
-            prop.load(new FileInputStream("config.properties"));
-            BOT_TOKEN = prop.getProperty("BOT_TOKEN");
+            properties.load(Config.class.getClassLoader().getResourceAsStream("config.properties"));
         }
-        catch (IOException e)
-        {
-            throw new RuntimeException(e);
-        }
+        catch (IOException e) {throw new RuntimeException(e);}
 
+        return properties;
     }
 
     public static String getBotToken()
     {
-        return BOT_TOKEN;
+        return config.getProperty("BOT_TOKEN");
+    }
+
+    public static void main(String[] args)
+    {
+        System.out.println(Config.getBotToken());
     }
 }

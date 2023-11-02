@@ -92,7 +92,7 @@ public class DeceptionGame {
         Card card;
         do
         {
-            card = new Card(random.nextInt(clueCardsNumber) + 1 + ".png", "images/clue");
+            card = new Card(random.nextInt(clueCardsNumber) + 1 + ".png", "clue");
         }
         while (cardsBlackList.contains(card));
         cardsBlackList.add(card);
@@ -104,7 +104,7 @@ public class DeceptionGame {
         Card card;
         do
         {
-            card = new Card(random.nextInt(weaponCardsNumber) + 1 + ".png", "images/weapon");
+            card = new Card(random.nextInt(weaponCardsNumber) + 1 + ".png", "weapon");
         }
         while (cardsBlackList.contains(card));
         cardsBlackList.add(card);
@@ -147,12 +147,12 @@ public class DeceptionGame {
 
     public static int getClueCardsNumber()
     {
-        return Objects.requireNonNull(new File("src\\main\\java\\clue").listFiles()).length;
+        return Objects.requireNonNull(new File("src\\main\\resources\\images\\clue").listFiles()).length;
     }
 
     public static int getWeaponCardsNumber()
     {
-        return Objects.requireNonNull(new File("src\\main\\java\\weapon").listFiles()).length;
+        return Objects.requireNonNull(new File("src\\main\\resources\\images\\weapon").listFiles()).length;
     }
 
     public static ArrayList<Player> getListOfPlayers()
