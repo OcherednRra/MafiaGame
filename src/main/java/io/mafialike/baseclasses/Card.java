@@ -14,17 +14,28 @@ public class Card
         this.type = type;
     }
 
-    public static Card getRandomClueCard()
+    public static Card getRandomCard(String cardType, int cardNumber)
     {
         Card card;
         do
         {
-            card = new Card(random.nextInt(DeceptionGame.getClueCardsNumber()) + 1 + ".png", "clue");
+            card = new Card(random.nextInt(cardNumber) + 1 + ".png", cardType);
         }
         while (DeceptionGame.getInGameCardsList().contains(card));
         DeceptionGame.getInGameCardsList().add(card);
         return card;
     }
+
+    public static Card getRandomClueCard()
+    {
+        return getRandomCard("clue", DeceptionGame.getClueCardsNumber());
+    }
+
+    public static Card getRandomWeaponCard()
+    {
+        return getRandomCard("weapon", DeceptionGame.getWeaponCardsNumber());
+    }
+
 
     public String getTitle()
     {
@@ -35,19 +46,6 @@ public class Card
     {
         return this.type;
     }
-
-    public static Card getRandomWeaponCard()
-    {
-        Card card;
-        do
-        {
-            card = new Card(random.nextInt(DeceptionGame.getWeaponCardsNumber()) + 1 + ".png", "weapon");
-        }
-        while (DeceptionGame.getInGameCardsList().contains(card));
-        DeceptionGame.getInGameCardsList().add(card);
-        return card;
-    }
-
     public String toString() {
         return this.type + " card " + this.title;
     }
