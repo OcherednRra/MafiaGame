@@ -1,25 +1,14 @@
-import net.dv8tion.jda.api.EmbedBuilder;
+import io.mafialike.baseclasses.DeceptionGame;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
 import net.dv8tion.jda.api.entities.User;
-import net.dv8tion.jda.api.entities.channel.concrete.TextChannel;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.dv8tion.jda.api.requests.GatewayIntent;
-import net.dv8tion.jda.api.utils.FileUpload;
 
-import java.awt.*;
-import java.awt.font.ImageGraphicAttribute;
-import java.awt.image.BufferedImage;
-import java.awt.image.DataBufferByte;
-import java.io.ByteArrayInputStream;
-import java.io.File;
-import java.io.IOException;
-import java.nio.Buffer;
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.Objects;
 
 public class DiscordBot extends ListenerAdapter
 {
@@ -71,7 +60,7 @@ public class DiscordBot extends ListenerAdapter
                         ImagesJoin.createCardHandsImage(DeceptionGame.getListOfPlayers(), userIdList, event, bot);
 
                     discordTagsOfPlayers.clear();
-                    DeceptionGame.listOfPlayers.clear();
+                    DeceptionGame.getListOfPlayers().clear();
                     userIdList.clear();
                     isGameOn = false;
                 }

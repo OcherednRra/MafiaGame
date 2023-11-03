@@ -13,4 +13,9 @@
       <module name="MafiaGame" target="19" />
     </bytecodeTargetLevel>
   </component>
+  <component name="JavacSettings">
+    <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="MafiaGame" options="--add-modules java.base,java.desktop" />
+    </option>
+  </component>
 </project>

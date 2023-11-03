@@ -1,10 +1,4 @@
-import org.w3c.dom.ls.LSOutput;
-
 import java.io.*;
-import java.nio.file.Files;
-import java.nio.file.Path;
-import java.nio.file.Paths;
-import java.util.Objects;
 import java.util.Properties;
 
 public class Config
@@ -19,7 +13,7 @@ public class Config
         {
             properties.load(Config.class.getClassLoader().getResourceAsStream("config.properties"));
         }
-        catch (IOException e) {throw new RuntimeException(e);}
+        catch (IOException e) {throw new RuntimeException("Error reading configuration file");}
 
         return properties;
     }
@@ -31,6 +25,7 @@ public class Config
 
     public static void main(String[] args)
     {
-        System.out.println(Config.getBotToken());
+        System.out.println("=== Simple Config class testing ===");
+        System.out.println("BOT_TOKEN = " + Config.getBotToken());
     }
 }

@@ -4,115 +4,22 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="db0c8328-fe78-4682-8b53-df3d5f8f1b1c" name="Changes" comment="fix project folder structure">
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/100.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/101.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/102.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/103.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/104.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/105.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/106.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/107.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/108.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/109.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/110.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/111.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/112.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/113.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/114.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/115.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/116.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/117.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/118.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/119.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/120.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/121.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/122.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/123.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/124.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/125.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/126.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/127.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/128.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/129.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/130.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/131.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/132.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/133.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/134.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/135.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/136.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/137.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/138.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/139.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/140.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/141.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/142.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/143.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/144.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/145.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/146.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/147.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/148.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/149.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/150.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/151.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/152.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/153.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/154.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/155.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/156.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/157.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/158.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/159.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/160.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/161.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/162.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/163.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/164.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/165.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/166.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/167.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/168.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/169.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/170.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/171.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/172.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/173.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/174.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/175.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/176.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/177.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/178.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/179.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/180.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/181.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/182.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/183.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/184.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/185.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/186.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/187.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/188.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/189.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/190.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/191.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/192.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/193.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/194.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/195.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/196.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/197.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/198.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/199.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/200.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/98.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/images/clue/99.png" afterDir="false" />
+    <list default="true" id="24efe260-2737-4aaf-85a4-cda743a74076" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/MafiaGame.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/mafialike/baseclasses/Card.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/mafialike/baseclasses/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/compiler.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/compiler.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/Config.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DeceptionGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DeceptionGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DeceptionGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mafialike/baseclasses/DeceptionGame.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DiscordBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DiscordBot.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/ImagesJoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImagesJoin.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -139,8 +46,8 @@
       </MavenGeneralSettings>
     </option>
   </component>
-  <component name="ProjectId" id="2XCt5hcf5XQTh7ifnyKJ2SzIiu5" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+  <component name="ProjectId" id="2XfwI0ZYEHXv98PAaVJMMk3XagO" />
+  <component name="ProjectLevelVcsManager">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
   <component name="ProjectViewState">
@@ -150,37 +57,20 @@
   </component>
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
-    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
-    "last_opened_file_path": "C:/Users/valen/IdeaProjects/MafiaGame",
-    "project.structure.last.edited": "Libraries",
-    "project.structure.proportion": "0.15",
-    "project.structure.side.proportion": "0.2",
-    "settings.editor.selected.configurable": "preferences.customizations"
+    "run.code.analysis.last.selected.profile": "pProject Default"
   }
 }]]></component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\valen\IdeaProjects\MafiaGame" />
-      <recent name="C:\Users\valen\IdeaProjects\MafiaGame\src\main\java" />
-      <recent name="C:\Users\valen\IdeaProjects\MafiaGame\src\main\java\temp" />
-      <recent name="C:\Users\valen\IdeaProjects\MafiaGame\src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\valen\IdeaProjects\MafiaGame\src\main\resources\images" />
-      <recent name="C:\Users\valen\IdeaProjects\MafiaGame\src\main\resources\images\clue" />
-      <recent name="C:\Users\valen\IdeaProjects\MafiaGame\src\main\resources" />
-      <recent name="C:\Users\valen\IdeaProjects\MafiaGame\src\main\java" />
-      <recent name="C:\Users\valen\IdeaProjects\MafiaGame\src\main\java\me\mafialikebot\clue\clue" />
-    </key>
-    <key name="MoveClassesOrPackagesDialog.RECENTS_KEY">
-      <recent name="" />
+      <recent name="C:\Users\valen\IdeaProjects\MafiaGame" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Config">
+  <component name="RunManager" selected="Application.MafiaLike">
     <configuration name="Config" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="Config" />
       <module name="MafiaGame" />
@@ -195,154 +85,23 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="me.mafialikebot.clue.App" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="me.mafialikebot.clue.App" />
-      <module name="MafiaGame" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="me.mafialikebot.clue.DeceptionGame" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="me.mafialikebot.clue.DeceptionGame" />
-      <module name="MafiaGame" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.Config" />
         <item itemvalue="Application.MafiaLike" />
-        <item itemvalue="Application.me.mafialikebot.clue.App" />
-        <item itemvalue="Application.me.mafialikebot.clue.DeceptionGame" />
+        <item itemvalue="Application.Config" />
       </list>
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="db0c8328-fe78-4682-8b53-df3d5f8f1b1c" name="Changes" comment="" />
-      <created>1698144708874</created>
+      <changelist id="24efe260-2737-4aaf-85a4-cda743a74076" name="Changes" comment="" />
+      <created>1699033363075</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1698144708874</updated>
-      <workItem from="1698144710453" duration="55000" />
-      <workItem from="1698146316990" duration="733000" />
-      <workItem from="1698147178604" duration="12524000" />
-      <workItem from="1698168975760" duration="8643000" />
-      <workItem from="1698253331589" duration="8031000" />
-      <workItem from="1698433182817" duration="7564000" />
-      <workItem from="1698507423566" duration="18941000" />
-      <workItem from="1698683809403" duration="7090000" />
-      <workItem from="1698780313822" duration="4009000" />
-      <workItem from="1698932019765" duration="12567000" />
+      <updated>1699033363075</updated>
+      <workItem from="1699033367059" duration="9340000" />
     </task>
-    <task id="LOCAL-00001" summary="add equals() method to class Card">
-      <created>1698158666337</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1698158666337</updated>
-    </task>
-    <task id="LOCAL-00002" summary="add getRandomWeaponCard() class">
-      <created>1698159908557</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1698159908557</updated>
-    </task>
-    <task id="LOCAL-00003" summary="some updates about starting games and also class Player">
-      <created>1698176474556</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1698176474556</updated>
-    </task>
-    <task id="LOCAL-00004" summary="fix error, add discord tags">
-      <created>1698254783884</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1698254783884</updated>
-    </task>
-    <task id="LOCAL-00005" summary="start making discord bot">
-      <created>1698265452507</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1698265452507</updated>
-    </task>
-    <task id="LOCAL-00006" summary="del token">
-      <created>1698265509306</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1698265509306</updated>
-    </task>
-    <task id="LOCAL-00007" summary="hide token to config file and create Config class">
-      <created>1698437899159</created>
-      <option name="number" value="00007" />
-      <option name="presentableId" value="LOCAL-00007" />
-      <option name="project" value="LOCAL" />
-      <updated>1698437899159</updated>
-    </task>
-    <task id="LOCAL-00008" summary="add hello message to private messages by command &quot;!private&quot;">
-      <created>1698439927017</created>
-      <option name="number" value="00008" />
-      <option name="presentableId" value="LOCAL-00008" />
-      <option name="project" value="LOCAL" />
-      <updated>1698439927017</updated>
-    </task>
-    <task id="LOCAL-00009" summary="trying to send picture to discord &#10;pizdec">
-      <created>1698524644491</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1698524644491</updated>
-    </task>
-    <task id="LOCAL-00010" summary="add sending of card hand to discord text channel">
-      <created>1698526290021</created>
-      <option name="number" value="00010" />
-      <option name="presentableId" value="LOCAL-00010" />
-      <option name="project" value="LOCAL" />
-      <updated>1698526290021</updated>
-    </task>
-    <task id="LOCAL-00011" summary="fix sending files">
-      <created>1698693063458</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1698693063458</updated>
-    </task>
-    <task id="LOCAL-00012" summary="fix sending files">
-      <created>1698693582700</created>
-      <option name="number" value="00012" />
-      <option name="presentableId" value="LOCAL-00012" />
-      <option name="project" value="LOCAL" />
-      <updated>1698693582700</updated>
-    </task>
-    <task id="LOCAL-00013" summary="fix sending files">
-      <created>1698787066899</created>
-      <option name="number" value="00013" />
-      <option name="presentableId" value="LOCAL-00013" />
-      <option name="project" value="LOCAL" />
-      <updated>1698787066899</updated>
-    </task>
-    <task id="LOCAL-00014" summary="fix sending files">
-      <created>1698787084818</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1698787084818</updated>
-    </task>
-    <task id="LOCAL-00015" summary="fix project folder structure">
-      <created>1698951248975</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1698951248975</updated>
-    </task>
-    <option name="localTasksCounter" value="16" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -358,25 +117,5 @@
         </entry>
       </map>
     </option>
-  </component>
-  <component name="VcsManagerConfiguration">
-    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="add equals() method to class Card" />
-    <MESSAGE value="add getRandomWeaponCard() class" />
-    <MESSAGE value="some updates about starting games and also class Player" />
-    <MESSAGE value="fix error, add discord tags" />
-    <MESSAGE value="start making discord bot" />
-    <MESSAGE value="del token" />
-    <MESSAGE value="hide token to config file and create Config class" />
-    <MESSAGE value="add hello message to private messages by command &quot;!private&quot;" />
-    <MESSAGE value="trying to send picture to discord &#10;pizdec" />
-    <MESSAGE value="add sending of card hand to discord text channel" />
-    <MESSAGE value="fix sending files" />
-    <MESSAGE value="fix project folder structure" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix project folder structure" />
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

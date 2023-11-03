@@ -1,6 +1,7 @@
+import io.mafialike.baseclasses.Card;
+import io.mafialike.baseclasses.Player;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.JDA;
-import net.dv8tion.jda.api.entities.MessageEmbed;
 import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.utils.FileUpload;
@@ -8,7 +9,6 @@ import net.dv8tion.jda.api.utils.FileUpload;
 import javax.imageio.ImageIO;
 import java.awt.*;
 import java.awt.image.BufferedImage;
-import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -16,16 +16,16 @@ import java.util.Objects;
 
 public class ImagesJoin
 {
-    public static void createImage(ArrayList<DeceptionGame.Card> cardsHand, String file_name) throws IOException{
+    public static void createImage(ArrayList<Card> cardsHand, String file_name) throws IOException{
 
         ArrayList<BufferedImage> imgs = new ArrayList<>();
 
         int totalWidth = 0;
         int maxHeight = 0;
 
-        for (DeceptionGame.Card card : cardsHand)
+        for (Card card : cardsHand)
         {
-            imgs.add(ImageIO.read(new File("src\\main\\resources\\images\\" + card.type + "\\" + card.title)));
+            imgs.add(ImageIO.read(new File("src\\main\\resources\\images\\" + card.getType() + "\\" + card.getTitle())));
         }
 
         for (BufferedImage img : imgs)
@@ -54,15 +54,15 @@ public class ImagesJoin
                         .setEmbeds(new EmbedBuilder().setImage("attachment://file.png").build())).queue();
     }
 
-    public static void createCardHandsImage(ArrayList<DeceptionGame.Player> listOfPlayers, ArrayList<User> usersIdList, MessageReceivedEvent event, JDA api)
+    public static void createCardHandsImage(ArrayList<Player> listOfPlayers, ArrayList<User> usersIdList, MessageReceivedEvent event, JDA api)
     {
         try {
             for (int i = 0; i < listOfPlayers.size(); i++)
             {
-                ImagesJoin.createImage(listOfPlayers.get(i).clueHand, listOfPlayers.get(i).name + "ClueHand.png");
-                sendImage(event, listOfPlayers.get(i).name + "ClueHand.png", usersIdList.get(i), api);
-                ImagesJoin.createImage(listOfPlayers.get(i).weaponHand, listOfPlayers.get(i).name + "WeaponHand.png");
-                sendImage(event, listOfPlayers.get(i).name + "WeaponHand.png", usersIdList.get(i), api);
+                ImagesJoin.createImage(listOfPlayers.get(i).getClueHand(), listOfPlayers.get(i).getName() + "ClueHand.png");
+                sendImage(event, listOfPlayers.get(i).getName() + "ClueHand.png", usersIdList.get(i), api);
+                ImagesJoin.createImage(listOfPlayers.get(i).getWeaponHand(), listOfPlayers.get(i).getName() + "WeaponHand.png");
+                sendImage(event, listOfPlayers.get(i).getName() + "WeaponHand.png", usersIdList.get(i), api);
             }
         }
         catch (IOException e) {
