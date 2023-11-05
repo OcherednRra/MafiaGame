@@ -7,66 +7,91 @@ import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.utils.FileUpload;
 
 import javax.imageio.ImageIO;
-import java.awt.*;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
 import java.util.ArrayList;
-import java.util.Objects;
 
 public class ImagesJoin
 {
-    public static void createImage(ArrayList<Card> cardsHand, String file_name) throws IOException{
-
+    public static void createImage(ArrayList<Card> cardsHand, String file_name) throws IOException
+    {
         ArrayList<BufferedImage> imgs = new ArrayList<>();
-
-        int totalWidth = 0;
-        int maxHeight = 0;
 
         for (Card card : cardsHand)
         {
-            imgs.add(ImageIO.read(new File("src\\main\\resources\\images\\" + card.getType() + "\\" + card.getTitle())));
+            String path = String.format("src\\main\\resources\\images\\%s\\%s", card.getType(), card.getTitle());
+            imgs.add(ImageIO.read(new File(path)));
         }
 
-        for (BufferedImage img : imgs)
-        {
-            totalWidth += img.getWidth();
-            maxHeight = Math.max(maxHeight, img.getHeight());
-        }
+        BufferedImage combined = new BufferedImage(imgs.get(0).getWidth(), imgs.get(0).getHeight(), BufferedImage.TYPE_INT_ARGB);
 
-        BufferedImage combined = new BufferedImage(totalWidth, maxHeight, BufferedImage.TYPE_INT_ARGB);
-
-        Graphics g = combined.getGraphics();
         int currentWidth = 0;
         for (BufferedImage img : imgs)
         {
-            g.drawImage(img, currentWidth, 0, null);
+            combined.getGraphics().drawImage(img, currentWidth, 0, null);
             currentWidth += img.getWidth();
         }
 
         ImageIO.write(combined, "PNG", new File("src\\main\\resources\\temp\\" + file_name));
     }
 
-    public static void sendImage(MessageReceivedEvent event, String file_name, User user, JDA api)
+    public static boolean sendImage(JDA api, String userID, String file_name)
     {
-        Objects.requireNonNull(api.getUserById(user.getId())).openPrivateChannel()
-                .flatMap(channel -> channel.sendFiles(FileUpload.fromData(new File("src\\main\\resources\\temp\\" + file_name), "file.png"))
-                        .setEmbeds(new EmbedBuilder().setImage("attachment://file.png").build())).queue();
+        User apiUser = api.getUserById(userID);
+        if (apiUser == null)
+        {
+            return false;
+        }
+
+        try
+        {
+            apiUser.openPrivateChannel()
+                    .flatMap(channel ->
+                    {
+                        String path = String.format("src\\main\\resources\\temp\\%s", file_name);
+                        FileUpload fileUpload = FileUpload.fromData(new File(path), "file.png");
+
+                        EmbedBuilder embedBuilder = new EmbedBuilder();
+                        embedBuilder.setImage("attachment://file.png");
+
+                        return channel.sendFiles(fileUpload).setEmbeds((embedBuilder.build()));
+                    }).queue();
+        }
+        catch (Exception e)
+        {
+            e.printStackTrace();
+            return false;
+        }
+
+        return true;
     }
 
-    public static void createCardHandsImage(ArrayList<Player> listOfPlayers, ArrayList<User> usersIdList, MessageReceivedEvent event, JDA api)
+    public static boolean createCardHandsImage(JDA api, ArrayList<Player> playerList)
     {
+        if (playerList.isEmpty())
+        {
+            return false;
+        }
+
+        Player[] playerArray = new Player[playerList.size()];
+        playerList.toArray(playerArray);
+
         try {
-            for (int i = 0; i < listOfPlayers.size(); i++)
-            {
-                ImagesJoin.createImage(listOfPlayers.get(i).getClueHand(), listOfPlayers.get(i).getName() + "ClueHand.png");
-                sendImage(event, listOfPlayers.get(i).getName() + "ClueHand.png", usersIdList.get(i), api);
-                ImagesJoin.createImage(listOfPlayers.get(i).getWeaponHand(), listOfPlayers.get(i).getName() + "WeaponHand.png");
-                sendImage(event, listOfPlayers.get(i).getName() + "WeaponHand.png", usersIdList.get(i), api);
+            for (Player player : playerArray) {
+                ImagesJoin.createImage(player.getClueHand(), player.getName() + "_clue.png");
+                sendImage(api, player.getID(), player.getName() + "_clue.png");
+
+                ImagesJoin.createImage(player.getWeaponHand(), player.getName() + "_weapon.png");
+                sendImage(api, player.getID(), player.getName() + "_weapon.png");
             }
         }
-        catch (IOException e) {
-            throw new RuntimeException(e);
+        catch (IOException e)
+        {
+            e.printStackTrace();
+            return false;
         }
+
+        return true;
     }
 }

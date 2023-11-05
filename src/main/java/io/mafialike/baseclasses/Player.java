@@ -7,6 +7,7 @@ public class Player
     String name;
     String role;
     String id;
+
     ArrayList<Card> clueHand = new ArrayList<>();
     ArrayList<Card> weaponHand = new ArrayList<>();
 
@@ -15,16 +16,16 @@ public class Player
         this.name = name;
         this.role = role;
         this.id = id;
-        for (int i = 0; i < 4; i++)
-        {
-            this.clueHand.add(Card.getRandomClueCard());
-            this.weaponHand.add(Card.getRandomWeaponCard());
-        }
     }
 
-    public Player createPlayer(String name, String role, String id)
+    public void setClueHand()
     {
-        return new Player(name, role, id);
+        this.clueHand = Card.createClueHand();
+    }
+
+    public void setWeaponHand()
+    {
+        this.weaponHand = Card.createWeaponHand();
     }
 
     public ArrayList<Card> getClueHand()
@@ -42,10 +43,12 @@ public class Player
         return this.name;
     }
 
+    public String getID() {
+        return this.id;
+    }
+
     public String toString()
     {
-        return "\nИгрок " + this.name + " - " + this.role + ".\n" +
-                "Clue: " + this.clueHand.toString() + "\n" +
-                "Weapon: " + this.weaponHand.toString() + "\n";
+        return "" + this.name + ":" + this.role + ":" + this.id;
     }
 }

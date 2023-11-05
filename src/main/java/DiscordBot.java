@@ -57,7 +57,7 @@ public class DiscordBot extends ListenerAdapter
                     System.out.println(userIdList.toString());
 
                     for (int i = 0; i < DeceptionGame.getListOfPlayers().size(); i++)
-                        ImagesJoin.createCardHandsImage(DeceptionGame.getListOfPlayers(), userIdList, event, bot);
+                        ImagesJoin.createCardHandsImage(bot, DeceptionGame.getListOfPlayers());
 
                     discordTagsOfPlayers.clear();
                     DeceptionGame.getListOfPlayers().clear();
