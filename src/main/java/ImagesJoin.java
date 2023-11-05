@@ -5,12 +5,15 @@ import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.utils.FileUpload;
+import okhttp3.internal.platform.Platform;
 
 import javax.imageio.ImageIO;
 import java.awt.image.BufferedImage;
 import java.io.File;
 import java.io.IOException;
+import java.lang.reflect.Array;
 import java.util.ArrayList;
+import java.util.Objects;
 
 public class ImagesJoin
 {
@@ -36,9 +39,9 @@ public class ImagesJoin
         ImageIO.write(combined, "PNG", new File("src\\main\\resources\\temp\\" + file_name));
     }
 
-    public static boolean sendImage(JDA api, String userID, String file_name)
+    public static boolean sendHandImage(JDA api, Player player, String handType)
     {
-        User apiUser = api.getUserById(userID);
+        User apiUser = api.getUserById(player.getID());
         if (apiUser == null)
         {
             return false;
@@ -46,17 +49,22 @@ public class ImagesJoin
 
         try
         {
+            String filePath;
+            if (handType.equals("clue") || handType.equals("weapon"))
+                filePath = String.format("src\\main\\resources\\temp\\%s_%s.png", player.getName(), handType);
+            else
+                throw new IllegalArgumentException("Invalid hand type: " + handType);
+
             apiUser.openPrivateChannel()
-                    .flatMap(channel ->
-                    {
-                        String path = String.format("src\\main\\resources\\temp\\%s", file_name);
-                        FileUpload fileUpload = FileUpload.fromData(new File(path), "file.png");
+                .flatMap(channel ->
+                {
+                    FileUpload fileUpload = FileUpload.fromData(new File(filePath), "file.png");
 
-                        EmbedBuilder embedBuilder = new EmbedBuilder();
-                        embedBuilder.setImage("attachment://file.png");
+                    EmbedBuilder embedBuilder = new EmbedBuilder();
+                    embedBuilder.setImage("attachment://file.png");
 
-                        return channel.sendFiles(fileUpload).setEmbeds((embedBuilder.build()));
-                    }).queue();
+                    return channel.sendFiles(fileUpload).setEmbeds((embedBuilder.build()));
+                }).queue();
         }
         catch (Exception e)
         {
@@ -67,31 +75,39 @@ public class ImagesJoin
         return true;
     }
 
-    public static boolean createCardHandsImage(JDA api, ArrayList<Player> playerList)
+    public static boolean createHandImage(Player player, String handType)
     {
-        if (playerList.isEmpty())
+        if (player == null)
         {
             return false;
         }
 
-        Player[] playerArray = new Player[playerList.size()];
-        playerList.toArray(playerArray);
-
         try {
-            for (Player player : playerArray) {
-                ImagesJoin.createImage(player.getClueHand(), player.getName() + "_clue.png");
-                sendImage(api, player.getID(), player.getName() + "_clue.png");
+            String fileName = String.format("%s_%s.png", player.getName(), handType);
 
-                ImagesJoin.createImage(player.getWeaponHand(), player.getName() + "_weapon.png");
-                sendImage(api, player.getID(), player.getName() + "_weapon.png");
-            }
+            ArrayList<Card> hand;
+
+            if (handType.equals("clue"))
+                hand = player.getClueHand();
+            else if (handType.equals("weapon"))
+                hand = player.getWeaponHand();
+            else
+                throw new IllegalArgumentException("Invalid hand type: " + handType);
+
+            ImagesJoin.createImage(hand, fileName);
+
         }
         catch (IOException e)
         {
-            e.printStackTrace();
+            System.err.println("Failed to create or send image: " + e.getMessage());
             return false;
         }
 
         return true;
+    }
+
+    public static void main(String[] args) {
+        Player testPlayer = new Player("name", "role", "420212610219114498");
+        createHandImage(testPlayer, "clue");
     }
 }

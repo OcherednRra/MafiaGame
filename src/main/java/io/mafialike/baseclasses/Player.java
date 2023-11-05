@@ -11,7 +11,7 @@ public class Player
     ArrayList<Card> clueHand = new ArrayList<>();
     ArrayList<Card> weaponHand = new ArrayList<>();
 
-    Player(String name, String role, String id)
+    public Player(String name, String role, String id)
     {
         this.name = name;
         this.role = role;
