@@ -16,6 +16,9 @@ public class Player
         this.name = name;
         this.role = role;
         this.id = id;
+
+        setClueHand();
+        setWeaponHand();
     }
 
     public void setClueHand()

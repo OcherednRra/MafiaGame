@@ -2,6 +2,7 @@ package io.mafialike.other;
 
 import io.mafialike.baseclasses.DeceptionGame;
 import io.mafialike.baseclasses.Player;
+import io.mafialike.image.HandImageCreator;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
@@ -36,7 +37,7 @@ public class DiscordBot extends ListenerAdapter
         bot.addEventListener(new DiscordBot());
     }
 
-    public static boolean sendHandImage(JDA api, Player player, String handType)
+    public static void sendHandImage(JDA api, Player player, String handType)
     {
         try
         {
@@ -53,10 +54,8 @@ public class DiscordBot extends ListenerAdapter
         } catch (Exception e)
         {
             System.err.println("Failed to send image: " + e.getMessage());
-            return false;
         }
 
-        return true;
     }
 
     private static String getFilePath(Player player, String handType)
@@ -110,6 +109,19 @@ public class DiscordBot extends ListenerAdapter
                     event.getChannel().sendMessage(userIdList.size() + "/12").queue();
                 }
                 break;
+            case "!test":
+                User user = event.getAuthor();
+                Player testPlayer = new Player(user.getName(), "criminalist", user.getId());
+
+                String fileName;
+
+                fileName = String.format("%s_%s.png", testPlayer.getName(), "clue");
+                HandImageCreator.createClueHandImage(testPlayer, fileName);
+                sendHandImage(bot, testPlayer, "clue");
+
+                fileName = String.format("%s_%s.png", testPlayer.getName(), "weapon");
+                HandImageCreator.createWeaponHandImage(testPlayer, fileName);
+                sendHandImage(bot, testPlayer, "weapon");
         }
 
     }
