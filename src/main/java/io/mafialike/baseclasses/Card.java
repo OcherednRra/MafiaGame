@@ -19,7 +19,7 @@ public class Card
     public static ArrayList<Card> createHand(Supplier<Card> cardSupplier)
     {
         ArrayList<Card> hand = new ArrayList<>();
-        for (byte i = 0; i <= 4; i++) { hand.add(cardSupplier.get()); }
+        for (byte i = 0; i < 4; i++) { hand.add(cardSupplier.get()); }
         return hand;
     }
 

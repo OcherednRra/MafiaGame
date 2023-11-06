@@ -4,11 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24efe260-2737-4aaf-85a4-cda743a74076" name="Changes" comment="fix some troubles with ImagesJoin.java">
+    <list default="true" id="24efe260-2737-4aaf-85a4-cda743a74076" name="Changes" comment="fix some troubles with ImagesJoin.java 2 (fuck)">
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/mafialike/image/HandImageCreator.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/MafiaGame.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/MafiaGame.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DiscordBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DiscordBot.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/ImagesJoin.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/ImagesJoin.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/mafialike/baseclasses/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mafialike/baseclasses/Player.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mafialike/other/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DiscordBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mafialike/other/DiscordBot.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/ImagesJoin.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/MafiaLike.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mafialike/other/MafiaLike.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/mafialike/baseclasses/Card.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mafialike/baseclasses/Card.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -59,23 +64,49 @@
       <recent name="C:\Users\valen\IdeaProjects\MafiaGame" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.ImagesJoin">
-    <configuration name="Config" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="Config" />
+  <component name="RunManager" selected="Application.HandImageCreator">
+    <configuration name="HandImageCreator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.mafialike.image.HandImageCreator" />
+      <module name="MafiaGame" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.mafialike.image.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="io.mafialike.image.Image" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.mafialike.image.Image" />
+      <module name="MafiaGame" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="io.mafialike.image.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="io.mafialike.image.ImagesJoin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.mafialike.image.ImagesJoin" />
       <module name="MafiaGame" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="ImagesJoin" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="ImagesJoin" />
+    <configuration name="io.mafialike.other.Config" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.mafialike.other.Config" />
       <module name="MafiaGame" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="MafiaLike" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <option name="MAIN_CLASS_NAME" value="MafiaLike" />
+    <configuration name="io.mafialike.other.MafiaLike" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="io.mafialike.other.MafiaLike" />
       <module name="MafiaGame" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -83,9 +114,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Application.ImagesJoin" />
-        <item itemvalue="Application.MafiaLike" />
-        <item itemvalue="Application.Config" />
+        <item itemvalue="Application.HandImageCreator" />
+        <item itemvalue="Application.io.mafialike.image.Image" />
+        <item itemvalue="Application.io.mafialike.image.ImagesJoin" />
+        <item itemvalue="Application.io.mafialike.other.MafiaLike" />
+        <item itemvalue="Application.io.mafialike.other.Config" />
       </list>
     </recent_temporary>
   </component>
@@ -98,7 +131,8 @@
       <option name="presentableId" value="Default" />
       <updated>1699033363075</updated>
       <workItem from="1699033367059" duration="11425000" />
-      <workItem from="1699212032059" duration="8373000" />
+      <workItem from="1699212032059" duration="8399000" />
+      <workItem from="1699277042735" duration="15235000" />
     </task>
     <task id="LOCAL-00001" summary="ревизия">
       <created>1699044840277</created>
@@ -121,7 +155,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699217943428</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="fix some troubles with ImagesJoin.java 2 (fuck)">
+      <created>1699220489957</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1699220489957</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -141,6 +182,7 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="ревизия" />
     <MESSAGE value="fix some troubles with ImagesJoin.java" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix some troubles with ImagesJoin.java" />
+    <MESSAGE value="fix some troubles with ImagesJoin.java 2 (fuck)" />
+    <option name="LAST_COMMIT_MESSAGE" value="fix some troubles with ImagesJoin.java 2 (fuck)" />
   </component>
 </project>

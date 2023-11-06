@@ -1,3 +1,5 @@
+package io.mafialike.other;
+
 import java.io.*;
 import java.util.Properties;
 
@@ -23,9 +25,14 @@ public class Config
         return config.getProperty("BOT_TOKEN");
     }
 
+    public static String getTestUserId()
+    {
+        return config.getProperty("TEST_USER_ID");
+    }
+
     public static void main(String[] args)
     {
-        System.out.println("=== Simple Config class testing ===");
+        System.out.println("=== Simple io.mafialike.other.Config class testing ===");
         System.out.println("BOT_TOKEN = " + Config.getBotToken());
     }
 }

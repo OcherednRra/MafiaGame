@@ -1,4 +1,8 @@
+package io.mafialike.other;
+
 import io.mafialike.baseclasses.DeceptionGame;
+import io.mafialike.baseclasses.Player;
+import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
@@ -6,12 +10,17 @@ import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
 import net.dv8tion.jda.api.requests.GatewayIntent;
+import net.dv8tion.jda.api.utils.FileUpload;
 
+import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
 
 public class DiscordBot extends ListenerAdapter
 {
+    private static final String CLUE = "clue";
+    private static final String WEAPON = "weapon";
+
     private static JDA bot;
     public final ArrayList<User> userIdList = new ArrayList<>();
     private boolean isGameOn = false;
@@ -25,6 +34,37 @@ public class DiscordBot extends ListenerAdapter
                 .build();
 
         bot.addEventListener(new DiscordBot());
+    }
+
+    public static boolean sendHandImage(JDA api, Player player, String handType)
+    {
+        try
+        {
+            api.retrieveUserById(player.getID()).queue(user -> {
+                user.openPrivateChannel().queue(channel -> {
+                    FileUpload fileUpload = FileUpload.fromData(new File(getFilePath(player, handType)), "file.png");
+
+                    EmbedBuilder embedBuilder = new EmbedBuilder();
+                    embedBuilder.setImage("attachment://file.png");
+
+                    channel.sendFiles(fileUpload).setEmbeds((embedBuilder.build())).queue();
+                });
+            });
+        } catch (Exception e)
+        {
+            System.err.println("Failed to send image: " + e.getMessage());
+            return false;
+        }
+
+        return true;
+    }
+
+    private static String getFilePath(Player player, String handType)
+    {
+        if (handType.equals(CLUE) || handType.equals(WEAPON))
+            return String.format("src\\main\\resources\\temp\\%s_%s.png", player.getName(), handType);
+        else
+            throw new IllegalArgumentException("Invalid hand type: " + handType);
     }
 
     public void onMessageReceived(MessageReceivedEvent event)
@@ -56,11 +96,7 @@ public class DiscordBot extends ListenerAdapter
                     // это пиздец
                     System.out.println(userIdList.toString());
 
-                    //for (int i = 0; i < DeceptionGame.getListOfPlayers().size(); i++)
-                    //{
-                        //ImagesJoin.createHandImage(bot, DeceptionGame.getListOfPlayers(), "clue");
-                        //ImagesJoin.createHandImage(bot, DeceptionGame.getListOfPlayers(), "weapon");
-                    //}
+
 
                     discordTagsOfPlayers.clear();
                     DeceptionGame.getListOfPlayers().clear();
