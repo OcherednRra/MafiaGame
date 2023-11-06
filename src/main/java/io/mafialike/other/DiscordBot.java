@@ -23,6 +23,7 @@ public class DiscordBot extends ListenerAdapter
     private static final String WEAPON = "weapon";
 
     private static JDA bot;
+
     public final ArrayList<User> userIdList = new ArrayList<>();
     private boolean isGameOn = false;
     ArrayList<String> discordTagsOfPlayers = new ArrayList<>();
