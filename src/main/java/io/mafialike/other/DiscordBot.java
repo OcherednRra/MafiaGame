@@ -45,6 +45,7 @@ public class DiscordBot extends ListenerAdapter
                 IS_GAME_ON = true;
                 break;
             case "!test":
+                // test
 //                methodTest(event);
 //                break;
         }
