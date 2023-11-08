@@ -16,30 +16,71 @@ import net.dv8tion.jda.api.utils.FileUpload;
 import java.io.File;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 
 public class DiscordBot extends ListenerAdapter
 {
     private static final String CLUE = "clue";
     private static final String WEAPON = "weapon";
+    private static boolean IS_GAME_ON = false;
 
-    private static JDA bot;
+    private static JDA api;
+    private static DeceptionGame game;
 
-    public final ArrayList<User> userIdList = new ArrayList<>();
-    private boolean isGameOn = false;
-    ArrayList<String> discordTagsOfPlayers = new ArrayList<>();
-
-    public static void startBot()
-    {
-        bot = JDABuilder.createDefault(Config.getBotToken())
-                .setActivity(Activity.playing("в спальной комната твоя мама"))
+    public static void startBot() {
+        api = JDABuilder.createDefault(Config.getBotToken())
                 .enableIntents(GatewayIntent.MESSAGE_CONTENT)
                 .build();
 
-        bot.addEventListener(new DiscordBot());
+        api.addEventListener(new DiscordBot());
     }
 
-    public static void sendHandImage(JDA api, Player player, String handType)
+    public void onMessageReceived(MessageReceivedEvent event)
     {
+        String command = Arrays.asList(event.getMessage().getContentRaw().split(" ")).get(0);
+
+        switch (command) {
+            case "!start":
+                if (!IS_GAME_ON) startGame(event);
+                IS_GAME_ON = true;
+                break;
+            case "!test":
+//                methodTest(event);
+//                break;
+        }
+    }
+
+    private static void methodTest(MessageReceivedEvent event) {
+        User user = event.getAuthor();
+        Player testPlayer = new Player(user.getName(), "criminalist", user.getId());
+
+        String fileName;
+
+        fileName = String.format("%s_%s.png", testPlayer.getName(), "clue");
+        HandImageCreator.createClueHandImage(testPlayer, fileName);
+        sendHandImage(testPlayer, "clue");
+
+        fileName = String.format("%s_%s.png", testPlayer.getName(), "weapon");
+        HandImageCreator.createWeaponHandImage(testPlayer, fileName);
+        sendHandImage(testPlayer, "weapon");
+    }
+
+    private static void startGame(MessageReceivedEvent event) {
+        ArrayList<User> usersList = new ArrayList<>(event.getMessage().getMentions().getUsers());
+        event.getChannel().sendMessage(usersList.toString()).queue();
+
+        game = new DeceptionGame(usersList);
+        game.startGame();
+
+        System.out.println(game.getPlayersList());
+        System.out.println(game.getPlayersList().get(0).getClueHand());
+
+        for (Player player : game.getPlayersList()) {
+            sendHandImage(player, "clue");
+        }
+    }
+
+    public static void sendHandImage(Player player, String handType) {
         try
         {
             api.retrieveUserById(player.getID()).queue(user -> {
@@ -59,71 +100,10 @@ public class DiscordBot extends ListenerAdapter
 
     }
 
-    private static String getFilePath(Player player, String handType)
-    {
+    private static String getFilePath(Player player, String handType) {
         if (handType.equals(CLUE) || handType.equals(WEAPON))
             return String.format("src\\main\\resources\\temp\\%s_%s.png", player.getName(), handType);
         else
             throw new IllegalArgumentException("Invalid hand type: " + handType);
-    }
-
-    public void onMessageReceived(MessageReceivedEvent event)
-    {
-        ArrayList<String> message = new ArrayList<>(Arrays.asList(event.getMessage().getContentRaw().split(" ")));
-
-        switch (message.get(0))
-        {
-            case "!start":
-                isGameOn = true;
-                event.getChannel().sendMessage(userIdList.size() + "/12").queue();
-                break;
-
-            case "!end":
-                if (isGameOn)
-                {
-                    event.getChannel().sendMessage("Набор игроков окончен " + userIdList.size()).queue();
-                    for (User user : userIdList)
-                    {
-                        discordTagsOfPlayers.add(user.getEffectiveName());
-                    }
-
-                    DeceptionGame game = new DeceptionGame(userIdList);
-                    game.startGame();
-                    // это пиздец
-                    // это пиздец
-                    // это пиздец
-                    // это пиздец
-                    // это пиздец
-                    System.out.println(userIdList.toString());
-
-
-
-                    discordTagsOfPlayers.clear();
-                    DeceptionGame.getListOfPlayers().clear();
-                    userIdList.clear();
-                    isGameOn = false;
-                }
-            case "!join":
-                if (isGameOn)
-                {
-                    userIdList.add(event.getAuthor());
-                    event.getChannel().sendMessage(userIdList.size() + "/12").queue();
-                }
-                break;
-            case "!test":
-                User user = event.getAuthor();
-                Player testPlayer = new Player(user.getName(), "criminalist", user.getId());
-
-                String fileName;
-
-                fileName = String.format("%s_%s.png", testPlayer.getName(), "clue");
-                HandImageCreator.createClueHandImage(testPlayer, fileName);
-                sendHandImage(bot, testPlayer, "clue");
-
-                fileName = String.format("%s_%s.png", testPlayer.getName(), "weapon");
-                HandImageCreator.createWeaponHandImage(testPlayer, fileName);
-                sendHandImage(bot, testPlayer, "weapon");
-        }
-
     }
 }

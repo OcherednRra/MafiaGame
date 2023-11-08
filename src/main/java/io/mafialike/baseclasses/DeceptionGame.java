@@ -3,31 +3,93 @@ package io.mafialike.baseclasses;
 import net.dv8tion.jda.api.entities.User;
 
 import java.io.File;
+import java.io.IOException;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.*;
+import java.util.stream.Stream;
 
 public class DeceptionGame {
 
-    private static final int clueCardsNumber = Objects.requireNonNull(new File("src\\main\\resources\\images\\clue").listFiles()).length;
-    private static final int weaponCardsNumber = Objects.requireNonNull(new File("src\\main\\resources\\images\\weapon").listFiles()).length;
-    private static final ArrayList<Card> inGameCardsList = new ArrayList<>();
+    private static final int clueCardsNumber = getFilesNumber("src/main/resources/images/clue");
+    private static final int weaponCardsNumber = getFilesNumber("src/main/resources/images/weapon");
 
     ArrayList<User> listOfUsers;
 
     int playersNumber;
-    ArrayList<String> discordTagsOfPlayers = new ArrayList<>();
-    ArrayList<String> idsOfPlayers = new ArrayList<>();
-    ArrayList<String> roles = new ArrayList<>();
-    static ArrayList<Player> listOfPlayers = new ArrayList<>();
+    ArrayList<String> roleList = new ArrayList<>();
+    ArrayList<Player> playersList = new ArrayList<>();
+    ArrayList<User> userList;
+    static ArrayList<Card> inGameCardsList = new ArrayList<>();
     String gameMode;
 
-    public DeceptionGame(ArrayList<User> listOfUsers)
-    {
-        this.listOfUsers = listOfUsers;
+    public DeceptionGame(ArrayList<User> userList) {
+        clearTempFiles();
+        this.userList = userList;
+    }
 
-        for (User user : listOfUsers)
+    public void startGame() {
+//        if (this.userList.size() < 4) {
+//            throw new IllegalArgumentException("Недостаточно игроков");
+//        }
+
+        inGameCardsList.clear();
+        setGameMode();
+        setRolesList();
+        createPlayers();
+    }
+
+    private void createPlayers() {
+        this.playersList.clear();
+        for (int i = 0; i < playersNumber; i ++)
+            playersList.add(
+                    new Player(
+                            userList.get(i).getName(),
+                            this.roleList.get(i),
+                            userList.get(i).getId()
+                    )
+            );
+    }
+
+    private void setRolesList() {
+        ArrayList<String> roleList = new ArrayList<>();
+
+        roleList.add("criminologist");
+        roleList.add("killer");
+
+        if (playersNumber > 5)
         {
-            this.discordTagsOfPlayers.add(user.getEffectiveName());
-            this.idsOfPlayers.add(user.getId());
+            roleList.add("accomplice");
+            roleList.add("witness");
+        }
+
+        for (int i = 0; i < playersNumber - (playersNumber > 5 ? 4 : 2); i++)
+            roleList.add("investigator");
+
+        Collections.shuffle(roleList);
+
+        this.roleList = roleList;
+    }
+
+    private static int getFilesNumber(String path) {
+        File file = new File(path);
+        return Objects.requireNonNull(file.listFiles()).length;
+    }
+
+    public void clearTempFiles() {
+        Path dir = Paths.get("src/main/resources/temp");
+        try (Stream<Path> paths = Files.walk(dir)) {
+            paths.filter(Files::isRegularFile)
+                    .forEach(path -> {
+                        try {
+                            Files.delete(path);
+                        } catch (IOException e) {
+                            e.printStackTrace();
+                        }
+                    });
+        } catch (IOException e) {
+            e.printStackTrace();
         }
     }
 
@@ -41,25 +103,12 @@ public class DeceptionGame {
         return this.listOfUsers.size();
     }
 
-    public String setGameMode()
+    public void setGameMode()
     {
-        this.roles.add("criminologist");
-        this.roles.add("killer");
-
-        if (playersNumber > 5)
-        {
-            this.roles.add("accomplice");
-            this.roles.add("witness");
-        }
-
-        for (int i = 0; i < playersNumber - (playersNumber > 5 ? 4 : 2); i++)
-            this.roles.add("investigator");
-
-        return (playersNumber <= 5) ? "standard" : "extended";
+        this.gameMode = (playersNumber <= 5) ? "standard" : "extended";
     }
 
-    public String getGameMode()
-    {
+    public String getGameMode() {
         return "Game Mode: " + gameMode + "\n"
                 + "Number of players: " + playersNumber;
     }
@@ -74,17 +123,8 @@ public class DeceptionGame {
         return clueCardsNumber;
     }
 
-    public static ArrayList<Player> getListOfPlayers()
+    public ArrayList<Player> getPlayersList()
     {
-        return listOfPlayers;
-    }
-
-    public void startGame()
-    {
-        this.gameMode = this.setGameMode();
-        Collections.shuffle(this.roles);
-
-        for (int i = 0; i < playersNumber; i ++)
-            listOfPlayers.add(new Player(this.discordTagsOfPlayers.get(i), this.roles.get(i), this.idsOfPlayers.get(i)));
+        return playersList;
     }
 }
