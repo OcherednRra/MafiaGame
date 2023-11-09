@@ -19,7 +19,7 @@ public class DeceptionGame {
 
     int playersNumber;
     ArrayList<String> roleList = new ArrayList<>();
-    ArrayList<Player> playersList = new ArrayList<>();
+    private static ArrayList<Player> playersList = new ArrayList<>();
     ArrayList<User> userList;
     static ArrayList<Card> inGameCardsList = new ArrayList<>();
     String gameMode;
@@ -35,17 +35,21 @@ public class DeceptionGame {
 //        }
 
         inGameCardsList.clear();
-        setGameMode();
-        setRolesList();
-        createPlayers();
+        playersNumber = this.userList.size();
+        this.setGameMode();
+        System.out.println(getGameMode());
+        this.setRolesList();
+        System.out.println(getRoleList());
+        this.createPlayers();
+        System.out.println(getPlayersList());
     }
 
     private void createPlayers() {
-        this.playersList.clear();
+        playersList.clear();
         for (int i = 0; i < playersNumber; i ++)
             playersList.add(
                     new Player(
-                            userList.get(i).getName(),
+                            userList.get(i).getEffectiveName(),
                             this.roleList.get(i),
                             userList.get(i).getId()
                     )
@@ -70,6 +74,10 @@ public class DeceptionGame {
         Collections.shuffle(roleList);
 
         this.roleList = roleList;
+    }
+
+    public ArrayList<String> getRoleList() {
+        return roleList;
     }
 
     private static int getFilesNumber(String path) {
