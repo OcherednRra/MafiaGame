@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24efe260-2737-4aaf-85a4-cda743a74076" name="Changes" comment="fix">
+    <list default="true" id="24efe260-2737-4aaf-85a4-cda743a74076" name="Changes" comment="add emoji to private message">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/mafialike/baseclasses/DeceptionGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mafialike/baseclasses/DeceptionGame.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/mafialike/other/DiscordBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mafialike/other/DiscordBot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -48,7 +47,6 @@
     &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;
   }
@@ -128,7 +126,8 @@
       <workItem from="1699212032059" duration="8399000" />
       <workItem from="1699277042735" duration="27804000" />
       <workItem from="1699471865706" duration="768000" />
-      <workItem from="1699540304175" duration="13161000" />
+      <workItem from="1699540304175" duration="13292000" />
+      <workItem from="1699696854397" duration="3889000" />
     </task>
     <task id="LOCAL-00001" summary="ревизия">
       <created>1699044840277</created>
@@ -193,7 +192,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699472078245</updated>
     </task>
-    <option name="localTasksCounter" value="10" />
+    <task id="LOCAL-00010" summary="add emoji to private message">
+      <created>1699566667533</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1699566667533</updated>
+    </task>
+    <option name="localTasksCounter" value="11" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -216,6 +222,7 @@
     <MESSAGE value="fix some troubles with ImagesJoin.java 2 (fuck)" />
     <MESSAGE value="end with HandImageCreator.java" />
     <MESSAGE value="fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="fix" />
+    <MESSAGE value="add emoji to private message" />
+    <option name="LAST_COMMIT_MESSAGE" value="add emoji to private message" />
   </component>
 </project>

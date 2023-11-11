@@ -7,6 +7,7 @@ import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
 import net.dv8tion.jda.api.entities.Activity;
+import net.dv8tion.jda.api.entities.MessageReaction;
 import net.dv8tion.jda.api.entities.User;
 import net.dv8tion.jda.api.entities.emoji.Emoji;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
@@ -61,17 +62,15 @@ public class DiscordBot extends ListenerAdapter
 
     public void onMessageReactionAdd(MessageReactionAddEvent event) {
         // Получите эмодзи реакции
-        String reactionEmote = event.getReaction().getEmoji().asUnicode().getAsCodepoints();
-        System.out.println(reactionEmote);
 
-        // Проверьте, какую реакцию добавил пользователь
-        switch (reactionEmote) {
-            case "U+31U+fe0fU+20e3" -> System.out.println("Пользователь нажал 1️⃣"); // 1️⃣
-            case "U+32U+fe0fU+20e3" -> System.out.println("Пользователь нажал 2️⃣"); // 2️⃣
-            case "U+33U+fe0fU+20e3" -> System.out.println("Пользователь нажал 3️⃣"); // 3️⃣
-            case "U+34U+fe0fU+20e3" -> System.out.println("Пользователь нажал 4️⃣"); // 4️⃣
-            default -> System.out.println("Пользователь нажал другую реакцию");
-        }
+        String reactionEmote = event.getReaction().getEmoji().asUnicode().getAsCodepoints();
+            switch (reactionEmote) {
+                case "U+31U+fe0fU+20e3" -> System.out.println("Пользователь нажал 1️⃣"); // 1️⃣
+                case "U+32U+fe0fU+20e3" -> System.out.println("Пользователь нажал 2️⃣"); // 2️⃣
+                case "U+33U+fe0fU+20e3" -> System.out.println("Пользователь нажал 3️⃣"); // 3️⃣
+                case "U+34U+fe0fU+20e3" -> System.out.println("Пользователь нажал 4️⃣"); // 4️⃣
+                default -> System.out.println("Пользователь нажал другую реакцию");
+            }
     }
 
     private static void methodTest(MessageReceivedEvent event) {
