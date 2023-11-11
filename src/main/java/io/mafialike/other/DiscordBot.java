@@ -33,6 +33,8 @@ public class DiscordBot extends ListenerAdapter
     private static final String WEAPON = "weapon";
     private static boolean IS_GAME_ON = false;
 
+    private static  ArrayList<String> handImagesIDs = new ArrayList<>();
+
     private static JDA api;
     private static DeceptionGame game;
 
@@ -52,6 +54,8 @@ public class DiscordBot extends ListenerAdapter
             case "!start":
                 if (!IS_GAME_ON) startGame(event);
                 IS_GAME_ON = true;
+
+
                 break;
             case "!test":
                 // test
@@ -61,16 +65,21 @@ public class DiscordBot extends ListenerAdapter
     }
 
     public void onMessageReactionAdd(MessageReactionAddEvent event) {
-        // Получите эмодзи реакции
-
-        String reactionEmote = event.getReaction().getEmoji().asUnicode().getAsCodepoints();
-            switch (reactionEmote) {
-                case "U+31U+fe0fU+20e3" -> System.out.println("Пользователь нажал 1️⃣"); // 1️⃣
-                case "U+32U+fe0fU+20e3" -> System.out.println("Пользователь нажал 2️⃣"); // 2️⃣
-                case "U+33U+fe0fU+20e3" -> System.out.println("Пользователь нажал 3️⃣"); // 3️⃣
-                case "U+34U+fe0fU+20e3" -> System.out.println("Пользователь нажал 4️⃣"); // 4️⃣
-                default -> System.out.println("Пользователь нажал другую реакцию");
+        event.getChannel().retrieveMessageById(event.getMessageId()).queue(message -> {
+            List<MessageReaction> reactionList = message.getReactions();
+            for (MessageReaction reaction : reactionList) {
+                int count = reaction.getCount();
+                if (count == 2) {
+                    switch (reaction.getEmoji().asUnicode().getAsCodepoints()) {
+                        case "U+31U+fe0fU+20e3" -> System.out.println("Пользователь нажал 1️⃣"); // 1️⃣
+                        case "U+32U+fe0fU+20e3" -> System.out.println("Пользователь нажал 2️⃣"); // 2️⃣
+                        case "U+33U+fe0fU+20e3" -> System.out.println("Пользователь нажал 3️⃣"); // 3️⃣
+                        case "U+34U+fe0fU+20e3" -> System.out.println("Пользователь нажал 4️⃣"); // 4️⃣
+                        default -> System.out.println("Пользователь нажал другую реакцию");
+                    }
+                }
             }
+        });
     }
 
     private static void methodTest(MessageReceivedEvent event) {
@@ -138,6 +147,8 @@ public class DiscordBot extends ListenerAdapter
                     Emoji emoji4 = Emoji.fromUnicode("\u0034\uFE0F\u20E3");
 
                     channel.sendFiles(fileUpload).setEmbeds((embedBuilder.build())).queue(msg -> {
+                        handImagesIDs.add(msg.getId());
+
                         msg.addReaction(emoji1).queue();
                         msg.addReaction(emoji2).queue();
                         msg.addReaction(emoji3).queue();
