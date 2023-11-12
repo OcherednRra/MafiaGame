@@ -18,6 +18,7 @@ import net.dv8tion.jda.api.utils.FileUpload;
 
 import java.io.File;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -33,7 +34,8 @@ public class DiscordBot extends ListenerAdapter
     private static final String WEAPON = "weapon";
     private static boolean IS_GAME_ON = false;
 
-    private static  ArrayList<String> handImagesIDs = new ArrayList<>();
+    private static  ArrayList<String> clueHandImagesIDs = new ArrayList<>();
+    private static  ArrayList<String> weaponHandImagesIDs = new ArrayList<>();
 
     private static JDA api;
     private static DeceptionGame game;
@@ -66,15 +68,24 @@ public class DiscordBot extends ListenerAdapter
 
     public void onMessageReactionAdd(MessageReactionAddEvent event) {
         event.getChannel().retrieveMessageById(event.getMessageId()).queue(message -> {
+            String handType;
+            if (clueHandImagesIDs.contains(message.getId())) {
+                handType = "clue";
+            } else if (weaponHandImagesIDs.contains(message.getId())) {
+                handType = "weapon";
+            } else {
+                return;
+            }
+
             List<MessageReaction> reactionList = message.getReactions();
             for (MessageReaction reaction : reactionList) {
                 int count = reaction.getCount();
                 if (count == 2) {
                     switch (reaction.getEmoji().asUnicode().getAsCodepoints()) {
-                        case "U+31U+fe0fU+20e3" -> System.out.println("Пользователь нажал 1️⃣"); // 1️⃣
-                        case "U+32U+fe0fU+20e3" -> System.out.println("Пользователь нажал 2️⃣"); // 2️⃣
-                        case "U+33U+fe0fU+20e3" -> System.out.println("Пользователь нажал 3️⃣"); // 3️⃣
-                        case "U+34U+fe0fU+20e3" -> System.out.println("Пользователь нажал 4️⃣"); // 4️⃣
+                        case "U+31U+fe0fU+20e3" -> System.out.println("Пользователь нажал 1️⃣ (" + handType + ")"); // 1️⃣
+                        case "U+32U+fe0fU+20e3" -> System.out.println("Пользователь нажал 2️⃣ (" + handType + ")"); // 2️⃣
+                        case "U+33U+fe0fU+20e3" -> System.out.println("Пользователь нажал 3️⃣ (" + handType + ")"); // 3️⃣
+                        case "U+34U+fe0fU+20e3" -> System.out.println("Пользователь нажал 4️⃣ (" + handType + ")"); // 4️⃣
                         default -> System.out.println("Пользователь нажал другую реакцию");
                     }
                 }
@@ -109,7 +120,7 @@ public class DiscordBot extends ListenerAdapter
             for (Player player : game.getPlayersList()) {
                 api.retrieveUserById(player.getID()).queue(user -> {
                     user.openPrivateChannel().queue(channel -> {
-                        channel.sendMessage("Session: " + LocalDate.now().format(DateTimeFormatter.ofPattern("HH:mm"))).queue();
+                        channel.sendMessage("Session: " + LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm"))).queue();
                     });
                 });
 
@@ -147,7 +158,10 @@ public class DiscordBot extends ListenerAdapter
                     Emoji emoji4 = Emoji.fromUnicode("\u0034\uFE0F\u20E3");
 
                     channel.sendFiles(fileUpload).setEmbeds((embedBuilder.build())).queue(msg -> {
-                        handImagesIDs.add(msg.getId());
+                        if (handType.equals(CLUE))
+                            clueHandImagesIDs.add(msg.getId());
+                        else if (handType.equals(WEAPON))
+                            weaponHandImagesIDs.add(msg.getId());
 
                         msg.addReaction(emoji1).queue();
                         msg.addReaction(emoji2).queue();
