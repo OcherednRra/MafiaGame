@@ -23,6 +23,10 @@ public class DeceptionGame {
     ArrayList<User> userList;
     static ArrayList<Card> inGameCardsList = new ArrayList<>();
     String gameMode;
+    Player killer;
+    Player criminologist;
+    Player accomplice;
+    Player witness;
 
     public DeceptionGame(ArrayList<User> userList) {
         clearTempFiles();
@@ -30,10 +34,6 @@ public class DeceptionGame {
     }
 
     public void startGame() {
-//        if (this.userList.size() < 4) {
-//            throw new IllegalArgumentException("Недостаточно игроков");
-//        }
-
         inGameCardsList.clear();
         playersNumber = this.userList.size();
         this.setGameMode();
@@ -46,14 +46,22 @@ public class DeceptionGame {
 
     private void createPlayers() {
         playersList.clear();
-        for (int i = 0; i < playersNumber; i ++)
-            playersList.add(
-                    new Player(
-                            userList.get(i).getEffectiveName(),
-                            this.roleList.get(i),
-                            userList.get(i).getId()
-                    )
+        for (int i = 0; i < playersNumber; i ++) {
+            Player player = new Player(
+                    userList.get(i).getEffectiveName(),
+                    this.roleList.get(i),
+                    userList.get(i).getId()
             );
+
+            switch (player.getRole()) {
+                case "criminologist" -> criminologist = player;
+                case "killer" -> killer = player;
+                case "accomplice" -> accomplice = player;
+                case "witness" -> witness = player;
+            }
+
+            playersList.add(player);
+        }
     }
 
     private void setRolesList() {

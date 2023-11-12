@@ -1,5 +1,7 @@
 package io.mafialike.baseclasses;
 
+import io.mafialike.other.Config;
+
 import java.util.ArrayList;
 
 public class Player
@@ -44,6 +46,14 @@ public class Player
     public String getName()
     {
         return this.name;
+    }
+
+    public String getRole() {
+        return this.role;
+    }
+
+    public String getRoleDescription() {
+        return Config.getDescriptionOf(this.getRole());
     }
 
     public String getID() {

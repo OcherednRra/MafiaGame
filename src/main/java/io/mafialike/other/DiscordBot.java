@@ -30,8 +30,8 @@ import static io.mafialike.image.HandImageCreator.createWeaponHandImage;
 
 public class DiscordBot extends ListenerAdapter
 {
-    private static final String CLUE = "clue";
-    private static final String WEAPON = "weapon";
+    private static String CLUE;
+    private static String WEAPON;
     private static boolean IS_GAME_ON = false;
 
     private static  ArrayList<String> clueHandImagesIDs = new ArrayList<>();
@@ -39,6 +39,9 @@ public class DiscordBot extends ListenerAdapter
 
     private static JDA api;
     private static DeceptionGame game;
+
+    private static boolean IS_CLUE_SELECTED = false;
+    private static boolean IS_WEAPON_SELECTED = false;
 
     public static void startBot() {
         api = JDABuilder.createDefault(Config.getBotToken())
@@ -82,11 +85,16 @@ public class DiscordBot extends ListenerAdapter
                 int count = reaction.getCount();
                 if (count == 2) {
                     switch (reaction.getEmoji().asUnicode().getAsCodepoints()) {
-                        case "U+31U+fe0fU+20e3" -> System.out.println("Пользователь нажал 1️⃣ (" + handType + ")"); // 1️⃣
-                        case "U+32U+fe0fU+20e3" -> System.out.println("Пользователь нажал 2️⃣ (" + handType + ")"); // 2️⃣
-                        case "U+33U+fe0fU+20e3" -> System.out.println("Пользователь нажал 3️⃣ (" + handType + ")"); // 3️⃣
-                        case "U+34U+fe0fU+20e3" -> System.out.println("Пользователь нажал 4️⃣ (" + handType + ")"); // 4️⃣
-                        default -> System.out.println("Пользователь нажал другую реакцию");
+                        case "U+31U+fe0fU+20e3":
+
+                        case "U+32U+fe0fU+20e3":
+                            System.out.println("Пользователь нажал 2️⃣ (" + handType + ")"); // 2️⃣
+                        case "U+33U+fe0fU+20e3":
+                            System.out.println("Пользователь нажал 3️⃣ (" + handType + ")"); // 3️⃣
+                        case "U+34U+fe0fU+20e3":
+                            System.out.println("Пользователь нажал 4️⃣ (" + handType + ")"); // 4️⃣
+                        default:
+                            System.out.println("Пользователь нажал другую реакцию");
                     }
                 }
             }
@@ -120,22 +128,45 @@ public class DiscordBot extends ListenerAdapter
             for (Player player : game.getPlayersList()) {
                 api.retrieveUserById(player.getID()).queue(user -> {
                     user.openPrivateChannel().queue(channel -> {
-                        channel.sendMessage("Session: " + LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm"))).queue();
+                        String time = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm"));
+                        channel.sendMessage("Session: " + time + "\nRole: " + player.getRole()).queue();
                     });
                 });
 
                 createClueHandImage(player, player.getName() + "_clue.png");
-                sendHandImage(player, CLUE);
-
                 createWeaponHandImage(player, player.getName() + "_weapon.png");
-                sendHandImage(player, WEAPON);
+
+                switch (player.getRole()) {
+                    case "criminologist":
+                        // отправить ник убийцы и сообщника, а также карты, которые выбрал убийца
+                    case "killer":
+                        // отправить ник сообщника и дать выбрать карты
+                    case "accomplice":
+                        // отправить ник убийцы и дать выбрать карты
+                    case "witness":
+                        // отправить ник убийцы и сообщника (в случайном порядке)
+                    default:
+                        // sendRoleAndDescriptionMessage(player);
+                }
+
+                sendRoleAndDescriptionMessage(player);
+                sendHandImage(player, "clue");
+
+                sendHandImage(player, "weapon");
             }
         } catch (Exception e) {
             sendMessageToChannel(event, "❌ Error sending messages");
         } finally {
             sendMessageToChannel(event, "✅ Messages have been successfully sent");
         }
+    }
 
+    private static void sendRoleAndDescriptionMessage(Player player) {
+        api.retrieveUserById(player.getID()).queue(user -> {
+            user.openPrivateChannel().queue(channel -> {
+                channel.sendMessage(player.getRoleDescription()).queue();
+            });
+        });
     }
 
     private static void sendMessageToChannel(MessageReceivedEvent event, String message) {
@@ -152,21 +183,17 @@ public class DiscordBot extends ListenerAdapter
                     EmbedBuilder embedBuilder = new EmbedBuilder();
                     embedBuilder.setImage("attachment://file.png");
 
-                    Emoji emoji1 = Emoji.fromUnicode("\u0031\uFE0F\u20E3");
-                    Emoji emoji2 = Emoji.fromUnicode("\u0032\uFE0F\u20E3");
-                    Emoji emoji3 = Emoji.fromUnicode("\u0033\uFE0F\u20E3");
-                    Emoji emoji4 = Emoji.fromUnicode("\u0034\uFE0F\u20E3");
-
                     channel.sendFiles(fileUpload).setEmbeds((embedBuilder.build())).queue(msg -> {
-                        if (handType.equals(CLUE))
+                        if (handType.equals("clue"))
                             clueHandImagesIDs.add(msg.getId());
-                        else if (handType.equals(WEAPON))
+                        else if (handType.equals("weapon"))
                             weaponHandImagesIDs.add(msg.getId());
-
-                        msg.addReaction(emoji1).queue();
-                        msg.addReaction(emoji2).queue();
-                        msg.addReaction(emoji3).queue();
-                        msg.addReaction(emoji4).queue();
+                        if (player.getRole().equals("killer")) {
+                            msg.addReaction(Emoji.fromUnicode("\u0031\uFE0F\u20E3")).queue();
+                            msg.addReaction(Emoji.fromUnicode("\u0032\uFE0F\u20E3")).queue();
+                            msg.addReaction(Emoji.fromUnicode("\u0033\uFE0F\u20E3")).queue();
+                            msg.addReaction(Emoji.fromUnicode("\u0034\uFE0F\u20E3")).queue();
+                        }
                     });
 
                 });
@@ -179,7 +206,7 @@ public class DiscordBot extends ListenerAdapter
     }
 
     private static String getFilePath(Player player, String handType) {
-        if (handType.equals(CLUE) || handType.equals(WEAPON))
+        if (handType.equals("clue") || handType.equals("weapon"))
             return String.format("src\\main\\resources\\temp\\%s_%s.png", player.getName(), handType);
         else
             throw new IllegalArgumentException("Invalid hand type: " + handType);
