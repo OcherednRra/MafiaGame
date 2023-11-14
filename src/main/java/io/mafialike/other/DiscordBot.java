@@ -6,32 +6,29 @@ import io.mafialike.image.HandImageCreator;
 import net.dv8tion.jda.api.EmbedBuilder;
 import net.dv8tion.jda.api.JDA;
 import net.dv8tion.jda.api.JDABuilder;
-import net.dv8tion.jda.api.entities.Activity;
-import net.dv8tion.jda.api.entities.MessageReaction;
-import net.dv8tion.jda.api.entities.User;
+import net.dv8tion.jda.api.entities.*;
+import net.dv8tion.jda.api.entities.channel.concrete.VoiceChannel;
 import net.dv8tion.jda.api.entities.emoji.Emoji;
 import net.dv8tion.jda.api.events.message.MessageReceivedEvent;
 import net.dv8tion.jda.api.events.message.react.MessageReactionAddEvent;
 import net.dv8tion.jda.api.hooks.ListenerAdapter;
+import net.dv8tion.jda.api.managers.AudioManager;
 import net.dv8tion.jda.api.requests.GatewayIntent;
 import net.dv8tion.jda.api.utils.FileUpload;
+import org.w3c.dom.ls.LSOutput;
 
 import java.io.File;
 import java.time.LocalDate;
 import java.time.LocalTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Objects;
+import java.util.*;
 
-import static io.mafialike.image.HandImageCreator.createClueHandImage;
-import static io.mafialike.image.HandImageCreator.createWeaponHandImage;
+import static io.mafialike.image.HandImageCreator.*;
 
 public class DiscordBot extends ListenerAdapter
 {
-    private static String CLUE;
-    private static String WEAPON;
+    private static int CLUE_NUM;
+    private static int WEAPON_NUM;
     private static boolean IS_GAME_ON = false;
 
     private static  ArrayList<String> clueHandImagesIDs = new ArrayList<>();
@@ -54,14 +51,19 @@ public class DiscordBot extends ListenerAdapter
     public void onMessageReceived(MessageReceivedEvent event)
     {
         String command = Arrays.asList(event.getMessage().getContentRaw().split(" ")).get(0);
+        if (event.getAuthor().isBot()) return;
 
         switch (command) {
             case "!start":
                 if (!IS_GAME_ON) startGame(event);
                 IS_GAME_ON = true;
-
-
                 break;
+            case "!play":
+                Guild guild = event.getGuild();
+                VoiceChannel channel = guild.getVoiceChannelsByName("совместная мастурбация", true).get(0); // Это получит первый голосовой канал с именем "music"
+                AudioManager manager = guild.getAudioManager();
+                manager.setSendingHandler(new MySendHandler()); // MySendHandler должен быть вашей реализацией AudioSendHandler
+                manager.openAudioConnection(channel);
             case "!test":
                 // test
 //                methodTest(event);
@@ -80,25 +82,50 @@ public class DiscordBot extends ListenerAdapter
                 return;
             }
 
+
+
             List<MessageReaction> reactionList = message.getReactions();
             for (MessageReaction reaction : reactionList) {
                 int count = reaction.getCount();
-                if (count == 2) {
+                int num = 0;
+                if (count == 2 && (!IS_WEAPON_SELECTED || !IS_CLUE_SELECTED)) {
                     switch (reaction.getEmoji().asUnicode().getAsCodepoints()) {
-                        case "U+31U+fe0fU+20e3":
+                        case "U+31U+fe0fU+20e3" -> num = 1;
+                        case "U+32U+fe0fU+20e3" -> num = 2;
+                        case "U+33U+fe0fU+20e3" -> num = 3;
+                        case "U+34U+fe0fU+20e3" -> num = 4;
+                        default -> System.out.println("User select other emoji!");
+                    }
 
-                        case "U+32U+fe0fU+20e3":
-                            System.out.println("Пользователь нажал 2️⃣ (" + handType + ")"); // 2️⃣
-                        case "U+33U+fe0fU+20e3":
-                            System.out.println("Пользователь нажал 3️⃣ (" + handType + ")"); // 3️⃣
-                        case "U+34U+fe0fU+20e3":
-                            System.out.println("Пользователь нажал 4️⃣ (" + handType + ")"); // 4️⃣
-                        default:
-                            System.out.println("Пользователь нажал другую реакцию");
+                    if (handType.equals("clue") && !IS_CLUE_SELECTED) {
+                        IS_CLUE_SELECTED = true;
+                        CLUE_NUM = num;
+                    } else if (handType.equals("weapon") && !IS_WEAPON_SELECTED){
+                        IS_WEAPON_SELECTED = true;
+                        WEAPON_NUM = num;
                     }
                 }
             }
+
+            if (WEAPON_NUM != 0 && CLUE_NUM != 0) {
+                String clue = DeceptionGame.getKiller().getClueHand().get(CLUE_NUM-1).getTitle();
+                String weapon = DeceptionGame.getKiller().getWeaponHand().get(WEAPON_NUM-1).getTitle();
+                createClueAndWeaponImage(clue, weapon);
+
+                sendPrivateMessage(DeceptionGame.getKiller(), "Главная Улика и Орудие Убийства:");
+                sendHandImage(DeceptionGame.getKiller(), "-");
+
+
+                sendPrivateMessage(DeceptionGame.getCriminologist(), "Главная Улика и Орудие Убийства:");
+                sendHandImage(DeceptionGame.getCriminologist(), "-");
+
+                if (DeceptionGame.getAccomplice() != null) {
+                    sendPrivateMessage(DeceptionGame.getAccomplice(), "Главная Улика и Орудие Убийства:");
+                    sendHandImage(DeceptionGame.getAccomplice(), "-");
+                }
+            }
         });
+
     }
 
     private static void methodTest(MessageReceivedEvent event) {
@@ -126,30 +153,44 @@ public class DiscordBot extends ListenerAdapter
 
         try {
             for (Player player : game.getPlayersList()) {
-                api.retrieveUserById(player.getID()).queue(user -> {
-                    user.openPrivateChannel().queue(channel -> {
-                        String time = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm"));
-                        channel.sendMessage("Session: " + time + "\nRole: " + player.getRole()).queue();
-                    });
-                });
+                String time = LocalTime.now().format(DateTimeFormatter.ofPattern("HH:mm"));
+                sendPrivateMessage(player, "Session: " + time + "\nRole: " + player.getRole());
 
                 createClueHandImage(player, player.getName() + "_clue.png");
                 createWeaponHandImage(player, player.getName() + "_weapon.png");
 
+                String killer;
+                String accomplice;
                 switch (player.getRole()) {
-                    case "criminologist":
+                    case "criminologist" -> {
                         // отправить ник убийцы и сообщника, а также карты, которые выбрал убийца
-                    case "killer":
+                        killer = DeceptionGame.getKiller().getName();
+                        accomplice = DeceptionGame.getAccomplice() != null ? "@" + DeceptionGame.getAccomplice().getName() : "-";
+                        sendPrivateMessage(player, "Убийца: " + killer + "\nСообщник: " + accomplice);
+                    }
+                    case "killer" -> {
                         // отправить ник сообщника и дать выбрать карты
-                    case "accomplice":
-                        // отправить ник убийцы и дать выбрать карты
-                    case "witness":
+                        accomplice = DeceptionGame.getAccomplice() != null ? "@" + DeceptionGame.getAccomplice().getName() : "-";
+                        sendPrivateMessage(player, "Сообщник: " + accomplice);
+                    }
+                    case "accomplice" -> {
+                        // отправить ник убийцы и прислать выбраные карты
+                        killer = DeceptionGame.getKiller().getName();
+                        sendPrivateMessage(player, "Убийца: " + killer);
+                    }
+                    case "witness" -> {
                         // отправить ник убийцы и сообщника (в случайном порядке)
-                    default:
-                        // sendRoleAndDescriptionMessage(player);
+                        ArrayList<String> temp = new ArrayList<>();
+                        temp.add(DeceptionGame.getKiller().getName());
+                        if (DeceptionGame.getAccomplice() != null) {
+                            temp.add(DeceptionGame.getAccomplice().getName());
+                            Collections.shuffle(temp);
+                        }
+                        sendPrivateMessage(player, "Подозреваемые: " + String.join(" ", temp));
+                    }
                 }
 
-                sendRoleAndDescriptionMessage(player);
+                sendPrivateMessage(player, player.getRoleDescription());
                 sendHandImage(player, "clue");
 
                 sendHandImage(player, "weapon");
@@ -161,10 +202,10 @@ public class DiscordBot extends ListenerAdapter
         }
     }
 
-    private static void sendRoleAndDescriptionMessage(Player player) {
+    private static void sendPrivateMessage(Player player, String message) {
         api.retrieveUserById(player.getID()).queue(user -> {
             user.openPrivateChannel().queue(channel -> {
-                channel.sendMessage(player.getRoleDescription()).queue();
+                channel.sendMessage(message).queue();
             });
         });
     }
@@ -188,7 +229,8 @@ public class DiscordBot extends ListenerAdapter
                             clueHandImagesIDs.add(msg.getId());
                         else if (handType.equals("weapon"))
                             weaponHandImagesIDs.add(msg.getId());
-                        if (player.getRole().equals("killer")) {
+
+                        if (player.getRole().equals("killer")  && !handType.equals("-")) {
                             msg.addReaction(Emoji.fromUnicode("\u0031\uFE0F\u20E3")).queue();
                             msg.addReaction(Emoji.fromUnicode("\u0032\uFE0F\u20E3")).queue();
                             msg.addReaction(Emoji.fromUnicode("\u0033\uFE0F\u20E3")).queue();
@@ -208,6 +250,8 @@ public class DiscordBot extends ListenerAdapter
     private static String getFilePath(Player player, String handType) {
         if (handType.equals("clue") || handType.equals("weapon"))
             return String.format("src\\main\\resources\\temp\\%s_%s.png", player.getName(), handType);
+        else if (handType.equals("-"))
+            return "src/main/resources/temp/clueAndWeapon.png";
         else
             throw new IllegalArgumentException("Invalid hand type: " + handType);
     }

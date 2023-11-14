@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24efe260-2737-4aaf-85a4-cda743a74076" name="Changes" comment="problems with emojis detections">
+      <change afterPath="$PROJECT_DIR$/src/main/java/io/mafialike/other/MySendHandler.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/images/black_card.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/sounds/women_haha.mp3" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/mafialike/baseclasses/DeceptionGame.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mafialike/baseclasses/DeceptionGame.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/mafialike/baseclasses/Player.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mafialike/baseclasses/Player.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/io/mafialike/other/Config.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mafialike/other/Config.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/io/mafialike/image/HandImageCreator.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mafialike/image/HandImageCreator.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/mafialike/other/DiscordBot.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mafialike/other/DiscordBot.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -45,18 +47,25 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "run.code.analysis.last.selected.profile": "pProject Default",
-    "settings.editor.selected.configurable": "File.Encoding"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;ASKED_SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/valen/IdeaProjects/MafiaGame/src/main/resources&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;File.Encoding&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\valen\IdeaProjects\MafiaGame\src\main\resources" />
+      <recent name="C:\Users\valen\IdeaProjects\MafiaGame\src\main\resources\images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\valen\IdeaProjects\MafiaGame\src\main\resources\sounds" />
       <recent name="C:\Users\valen\IdeaProjects\MafiaGame" />
     </key>
   </component>
@@ -133,7 +142,11 @@
       <workItem from="1699540304175" duration="13292000" />
       <workItem from="1699696854397" duration="4131000" />
       <workItem from="1699724417544" duration="7510000" />
-      <workItem from="1699812939199" duration="11578000" />
+      <workItem from="1699812939199" duration="14354000" />
+      <workItem from="1699830666925" duration="5218000" />
+      <workItem from="1699836439287" duration="1118000" />
+      <workItem from="1699900615141" duration="689000" />
+      <workItem from="1699973189615" duration="595000" />
     </task>
     <task id="LOCAL-00001" summary="ревизия">
       <created>1699044840277</created>
@@ -226,7 +239,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699813560278</updated>
     </task>
-    <option name="localTasksCounter" value="14" />
+    <task id="LOCAL-00014" summary="problems with emojis detections">
+      <created>1699825895423</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1699825895423</updated>
+    </task>
+    <option name="localTasksCounter" value="15" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

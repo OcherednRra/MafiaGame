@@ -55,6 +55,47 @@ public class HandImageCreator
         }
     }
 
+    public static void createClueAndWeaponImage(String clueImg, String weaponImg)
+    {
+        try
+        {
+            ArrayList<BufferedImage> imgs = new ArrayList<>();
+            String[] paths = {
+                    "/images/black_card.png",
+                    "/images/clue/" + clueImg,
+                    "/images/weapon/" + weaponImg,
+                    "/images/black_card.png",
+            };
+
+            for (String path : paths) {
+                try (InputStream in = HandImageCreator.class.getResourceAsStream(path)) {
+                    assert in != null;
+                    imgs.add(ImageIO.read(in));
+                }
+            }
+
+            BufferedImage combined = new BufferedImage(
+                    getTotalWidth(imgs),
+                    getMaxHeight(imgs),
+                    BufferedImage.TYPE_INT_ARGB);
+
+            int currentWidth = 0;
+
+            Graphics g = combined.getGraphics();
+            for (BufferedImage img : imgs)
+            {
+                g.drawImage(img, currentWidth, 0, null);
+                currentWidth += img.getWidth();
+            }
+
+            writeImage(combined, "clueAndWeapon.png");
+
+        } catch (IOException e)
+        {
+            System.err.println("Failed to create image: " + e.getMessage());
+        }
+    }
+
     public static void writeImage(BufferedImage combined, String fileName) throws IOException
     {
         String path = "src/main/resources/temp/" + fileName;

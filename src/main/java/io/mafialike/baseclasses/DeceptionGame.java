@@ -23,10 +23,10 @@ public class DeceptionGame {
     ArrayList<User> userList;
     static ArrayList<Card> inGameCardsList = new ArrayList<>();
     String gameMode;
-    Player killer;
-    Player criminologist;
-    Player accomplice;
-    Player witness;
+    static Player killer = null;
+    static Player criminologist = null;
+    static Player accomplice = null;
+    static Player witness = null;
 
     public DeceptionGame(ArrayList<User> userList) {
         clearTempFiles();
@@ -137,6 +137,22 @@ public class DeceptionGame {
     public static int getClueCardsNumber()
     {
         return clueCardsNumber;
+    }
+
+    public static Player getCriminologist() {
+        return criminologist;
+    }
+
+    public static Player getKiller() {
+        return killer;
+    }
+
+    public static Player getWitness() {
+        return witness;
+    }
+
+    public static Player getAccomplice() {
+        return accomplice;
     }
 
     public ArrayList<Player> getPlayersList()
