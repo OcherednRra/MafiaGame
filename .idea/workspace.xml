@@ -141,7 +141,8 @@
       <workItem from="1699830666925" duration="5218000" />
       <workItem from="1699836439287" duration="1118000" />
       <workItem from="1699900615141" duration="689000" />
-      <workItem from="1699973189615" duration="1499000" />
+      <workItem from="1699973189615" duration="1623000" />
+      <workItem from="1700076179093" duration="27000" />
     </task>
     <task id="LOCAL-00001" summary="ревизия">
       <created>1699044840277</created>
@@ -248,7 +249,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699974425377</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="problems with emojis detections">
+      <created>1699975441955</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1699975441955</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
