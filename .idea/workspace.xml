@@ -5,7 +5,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="24efe260-2737-4aaf-85a4-cda743a74076" name="Changes" comment="problems with emojis detections">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/io/mafialike/other/MySendHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/io/mafialike/other/MySendHandler.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -142,7 +141,7 @@
       <workItem from="1699836439287" duration="1118000" />
       <workItem from="1699900615141" duration="689000" />
       <workItem from="1699973189615" duration="1623000" />
-      <workItem from="1700076179093" duration="27000" />
+      <workItem from="1700076179093" duration="647000" />
     </task>
     <task id="LOCAL-00001" summary="ревизия">
       <created>1699044840277</created>
@@ -256,7 +255,14 @@
       <option name="project" value="LOCAL" />
       <updated>1699975441955</updated>
     </task>
-    <option name="localTasksCounter" value="17" />
+    <task id="LOCAL-00017" summary="problems with emojis detections">
+      <created>1700076217055</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1700076217055</updated>
+    </task>
+    <option name="localTasksCounter" value="18" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

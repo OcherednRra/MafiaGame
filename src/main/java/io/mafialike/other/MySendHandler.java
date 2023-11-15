@@ -8,7 +8,7 @@ import java.io.IOException;
 import java.nio.ByteBuffer;
 
 public class MySendHandler implements AudioSendHandler {
-    private final byte[] buffer = new byte[2048];
+    private final byte[] buffer = new byte[1024];
     private AudioInputStream audioStream;
 
     public MySendHandler() {
